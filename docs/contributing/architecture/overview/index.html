@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Architecture Overview #  Here is a rough diagram of architecture and component ownership. For example, The Application is responsible for the AssetManager. More details of each component is described further down in this page. To have more in-depth information, it is highly recommended to start with the networking page.
+ mermaid.initialize({ &#34;theme&#34;: &#34;dark&#34; }) flowchart LR Main -- Application Application -- Renderer Application -- AssetManager Application -- ModManager Application -- Server Server -- Sector Sector -- Scene Server -- Database Server -- Services Server -- TCP-Server Application -- Client Client -- TCP-Client Client -- Scene-Proxy Client -- Store/Cache Application -- Views TCP-Server -- *TCP* TCP-Client -- *TCP* Example of an asteroid #  The following is an example of data flow, and what roughly happens, when we want to display a simple scene with an entity (such as an steroid) to the player once they connect to the server.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Overview" />
+<meta property="og:description" content="Architecture Overview #  Here is a rough diagram of architecture and component ownership. For example, The Application is responsible for the AssetManager. More details of each component is described further down in this page. To have more in-depth information, it is highly recommended to start with the networking page.
+ mermaid.initialize({ &#34;theme&#34;: &#34;dark&#34; }) flowchart LR Main -- Application Application -- Renderer Application -- AssetManager Application -- ModManager Application -- Server Server -- Sector Sector -- Scene Server -- Database Server -- Services Server -- TCP-Server Application -- Client Client -- TCP-Client Client -- Scene-Proxy Client -- Store/Cache Application -- Views TCP-Server -- *TCP* TCP-Client -- *TCP* Example of an asteroid #  The following is an example of data flow, and what roughly happens, when we want to display a simple scene with an entity (such as an steroid) to the player once they connect to the server." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://temporary-escape.github.io/docs/contributing/architecture/overview/" /><meta property="article:section" content="docs" />
+
+<meta property="article:modified_time" content="2022-02-02T01:02:32+01:00" />
+
+<title>Overview | Temporary Escape</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.e76cb45ac2d9b2d9a90c10314df7bf548e38e0672cfe705ac74755ebb2ae0b26.css" integrity="sha256-52y0WsLZstmpDBAxTfe/VI444Gcs/nBax0dV67KuCyY=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.f4c61933df7215dc02c58d9f87fd29b3506537755ea7a158709841f26f6e9723.js" integrity="sha256-9MYZM99yFdwCxY2fh/0ps1BlN3Vep6FYcJhB8m9ulyM=" crossorigin="anonymous"></script>
+
+  <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  <script defer language="javascript" type="text/javascript"  src="/js/download.js"></script>
+
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Temporary Escape</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/download/" class="">Download</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/about/" class="">About</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/media/" class="">Media</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/media/screenshots/" class="">Screenshots</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/codex/" class="">Codex</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/" class="">Contributing</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/todo/" class="">Things to do</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/dependencies/" class="">C&#43;&#43; Dependencies</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/setup/" class="">C&#43;&#43; Development Setup</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/setup/vscode/" class="">VS Code</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/setup/clion/" class="">CLion</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/setup/visual-studio/" class="">Visual Studio</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/building/" class="">Building</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/architecture/" class="">Engine Architecture</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/architecture/libraries/" class="">Libraries</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/architecture/overview/" class=" active">Overview</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/architecture/networking/" class="">Networking</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/architecture/server/" class="">Server</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/architecture/asset-manager/" class="">Asset Manager</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/architecture/database/" class="">Database</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/architecture/ecs/" class="">Entity Component System</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/architecture/scene/" class="">Scene</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Modding &amp; Assets</span>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var a=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Overview</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#architecture-overview">Architecture Overview</a>
+      <ul>
+        <li><a href="#example-of-an-asteroid">Example of an asteroid</a></li>
+        <li><a href="#next">Next</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="architecture-overview">
+  Architecture Overview
+  <a class="anchor" href="#architecture-overview">#</a>
+</h1>
+<p>Here is a rough diagram of architecture and component ownership. For example, The Application is responsible for the AssetManager. More details of each component is described further down in this page. To have more in-depth information, it is highly recommended to start with the 
+  <a href="https://temporary-escape.github.io/docs/contributing/architecture/networking/">networking</a> page.</p>
+
+
+<script src="/mermaid.min.js"></script>
+
+  <script>mermaid.initialize({
+    "theme": "dark"
+})</script>
+
+
+
+
+<p class="mermaid">
+flowchart LR
+    Main --> Application
+    Application --> Renderer
+    Application --> AssetManager
+    Application --> ModManager
+    Application --> Server
+    Server --> Sector
+    Sector --> Scene
+    Server --> Database
+    Server --> Services
+    Server --> TCP-Server
+    Application --> Client
+    Client --> TCP-Client
+    Client --> Scene-Proxy
+    Client --> Store/Cache
+    Application --> Views
+    TCP-Server --> *TCP*
+    TCP-Client --> *TCP*
+</p>
+
+<h2 id="example-of-an-asteroid">
+  Example of an asteroid
+  <a class="anchor" href="#example-of-an-asteroid">#</a>
+</h2>
+<p>The following is an example of data flow, and what roughly happens, when we want to display a simple scene with an entity (such as an steroid) to the player once they connect to the server.</p>
+<p>First, we need to know the definition of the asteroid we want to have in the sector. Before the client or the server is bootstraped the assets are loaded. The 
+  <a href="https://temporary-escape.github.io/docs/contributing/architecture/asset-manager/">asset manager</a> is responsible for loading all assets (models, textures, blocks, asteroids, items, etc.). In this case, the asteroid is defined in an XML file.</p>
+<p>Once the assets are loaded the 
+  <a href="https://temporary-escape.github.io/docs/contributing/architecture/database/">database</a> is bootstraped. The database holds all information about the universe. If no database is present an empty database is created.</p>
+<p>Afterwards the server is started. If this is the first time we are running the universe, it is procedurally generated, and may take a while to generate.</p>
+<p>When the server is ready to accept connections, the client will be created. Even if you are playing in a sigleplayer mode, the game is still running in a multiplayer mode, but accepts no outside connections (just you). The client will connect to the server.</p>
+<p>Once the client is connected the server will have to decide where to put the player. Using procedural generation, the server will spawn a player at a given sector within a system in the starting galaxy. The sector is spawned and loaded. The sector will use the 
+  <a href="https://temporary-escape.github.io/docs/contributing/architecture/database/">database</a> to spawn entities. If the sector has not been spawned before it is populated based on the procedural generation.</p>
+<p>All simulation happens in two places. Anything you see in your game (as a player) happens in the 
+  <a href="https://temporary-escape.github.io/docs/contributing/architecture/scene/">scene</a> that is owned by the sector instance. A scene is just a class that is responsible for entity logic and physics. Anything outside (research, etc.) happens in the services that is owned by the server. A service is simply a wrapper around the database that has a specific usage (regions, systems, sectors, players, inventory, etc.).</p>
+<p>Now we have a sector that is updated periodically (tick) with a scene that has an asteroid. Because the player was added to this sector the entity is replicated to the client.</p>
+<p>The server sends a message, data about the asteroid, over a 
+  <a href="https://temporary-escape.github.io/docs/contributing/architecture/networking/">network</a> framework to the client. The entity and all of its 
+  <a href="https://temporary-escape.github.io/docs/contributing/architecture/ecs/">components</a> will be put into a message. In this case, we will send over an entity position and the &ldquo;model component&rdquo;. The 
+  <a href="https://temporary-escape.github.io/docs/contributing/architecture/ecs/">model component</a> describes what kind of a 3D model the entity should have. The model is not send over, only the name of the asset that the model is loaded from is.</p>
+<p>The client receives the message and uses the asset name from the message to find the real 3D model asset. The client adds the entity to its own scene. Both the server and client own their own scenes. The server&rsquo;s scene is replicated to the client one.</p>
+<p>Finally, the rendering will take the client&rsquo;s scene and render everything to the screen.</p>
+<h2 id="next">
+  Next
+  <a class="anchor" href="#next">#</a>
+</h2>
+<p>See 
+  <a href="https://temporary-escape.github.io/docs/contributing/architecture/networking/">Networking</a> page.</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+  <div><a class="flex align-center" href="https://github.com/matusnovak/temporary-escape/commit/9fa521ee7e6060d615647a414fe13a67e67a7bf7" title='Last modified by Matus Novak | February 2, 2022' target="_blank" rel="noopener">
+      <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>February 2, 2022</span>
+    </a>
+  </div>
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/matusnovak/temporary-escape/edit/master/docs/content/docs/contributing/architecture/overview.md" target="_blank" rel="noopener">
+      <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+
+</div>
+
+
+
+  <script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#architecture-overview">Architecture Overview</a>
+      <ul>
+        <li><a href="#example-of-an-asteroid">Example of an asteroid</a></li>
+        <li><a href="#next">Next</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

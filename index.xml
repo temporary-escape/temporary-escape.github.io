@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Introduction on Temporary Escape</title>
+    <link>https://temporary-escape.github.io/</link>
+    <description>Recent content in Introduction on Temporary Escape</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://temporary-escape.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Download</title>
+      <link>https://temporary-escape.github.io/docs/download/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://temporary-escape.github.io/docs/download/</guid>
+      <description>Download #  Latest releases #  Loading&amp;hellip; #  </description>
+    </item>
+    
+    <item>
+      <title>Libraries</title>
+      <link>https://temporary-escape.github.io/docs/contributing/architecture/libraries/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://temporary-escape.github.io/docs/contributing/architecture/libraries/</guid>
+      <description>Libraries #  List of libraries used in this game.
+  wren - Wren, an embeddable scripting language. Used for scripting purposes and modding.  wrenbind17 - A header only library for binding C++17 to Wren language.  nuklear - A single-header ANSI C immediate mode cross-platform GUI library.  zlib - Needed by libpng.  glfw3 - Window and OpenGL context management.  glm - OpenGL header only C++ mathematics library.</description>
+    </item>
+    
+    <item>
+      <title>Screenshots</title>
+      <link>https://temporary-escape.github.io/docs/media/screenshots/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://temporary-escape.github.io/docs/media/screenshots/</guid>
+      <description>Screenshots #  Development screenshots January 2022 #            </description>
+    </item>
+    
+    <item>
+      <title>Things to do</title>
+      <link>https://temporary-escape.github.io/docs/contributing/todo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://temporary-escape.github.io/docs/contributing/todo/</guid>
+      <description>Things to do #  </description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://temporary-escape.github.io/docs/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://temporary-escape.github.io/docs/about/</guid>
+      <description>About #  </description>
+    </item>
+    
+    <item>
+      <title>Overview</title>
+      <link>https://temporary-escape.github.io/docs/contributing/architecture/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://temporary-escape.github.io/docs/contributing/architecture/overview/</guid>
+      <description>Architecture Overview #  Here is a rough diagram of architecture and component ownership. For example, The Application is responsible for the AssetManager. More details of each component is described further down in this page. To have more in-depth information, it is highly recommended to start with the networking page.
+ mermaid.initialize({ &#34;theme&#34;: &#34;dark&#34; }) flowchart LR Main -- Application Application -- Renderer Application -- AssetManager Application -- ModManager Application -- Server Server -- Sector Sector -- Scene Server -- Database Server -- Services Server -- TCP-Server Application -- Client Client -- TCP-Client Client -- Scene-Proxy Client -- Store/Cache Application -- Views TCP-Server -- *TCP* TCP-Client -- *TCP* Example of an asteroid #  The following is an example of data flow, and what roughly happens, when we want to display a simple scene with an entity (such as an steroid) to the player once they connect to the server.</description>
+    </item>
+    
+    <item>
+      <title>VS Code</title>
+      <link>https://temporary-escape.github.io/docs/contributing/setup/vscode/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://temporary-escape.github.io/docs/contributing/setup/vscode/</guid>
+      <description>Visual Studio Code #  This setup is suitable for Windows, Linux, or Mac OSX.
+1. Dependencies #  Make sure that you have installed dependencies and installed VSCode.
+2. Cloning #  Clone https://github.com/matusnovak/temporary-escape.git (or your own fork) via command line or through the GitHub VSCode extension. Open the temporary-folder through VS Code. You will also need to download the git submodules.
+git clone https://github.com/matusnovak/temporary-escape.git cd temporary-escape git submodule update --init 3.</description>
+    </item>
+    
+    <item>
+      <title>CLion</title>
+      <link>https://temporary-escape.github.io/docs/contributing/setup/clion/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://temporary-escape.github.io/docs/contributing/setup/clion/</guid>
+      <description>JetBrains CLion #  This setup is suitable for Windows, Linux, or Mac OSX.
+1. Dependencies #  Make sure that you have installed dependencies and installed CLion.
+2. Cloning #  Clone https://github.com/matusnovak/temporary-escape.git (or your own fork) via command line or through the &amp;ldquo;Get from VCS&amp;rdquo; option within the IDE. You will also need to download the git submodules.
+git clone https://github.com/matusnovak/temporary-escape.git cd temporary-escape git submodule update --init 3. Open the project #  Launch CLion and open the cloned repository.</description>
+    </item>
+    
+    <item>
+      <title>Networking</title>
+      <link>https://temporary-escape.github.io/docs/contributing/architecture/networking/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://temporary-escape.github.io/docs/contributing/architecture/networking/</guid>
+      <description>Networking #  Client Server model #  The game works in a classic client-server model. Server is responsible for simulating the world and persisting the data. The client is responsible for reading the information provided by the server and render it.
+There is no lockstep protocol or any similar mechanism that you may find in an FPS game. The client sends &amp;ldquo;commands&amp;rdquo; to the server. One of such command can be &amp;ldquo;approach this enemy NPC&amp;rdquo; while you are in your own player ship.</description>
+    </item>
+    
+    <item>
+      <title>Server</title>
+      <link>https://temporary-escape.github.io/docs/contributing/architecture/server/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://temporary-escape.github.io/docs/contributing/architecture/server/</guid>
+      <description>Server #  Tick #  TBA
+Sectors and scenes #  TBA
+Next #  See Asset Manager page.</description>
+    </item>
+    
+    <item>
+      <title>Visual Studio</title>
+      <link>https://temporary-escape.github.io/docs/contributing/setup/visual-studio/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://temporary-escape.github.io/docs/contributing/setup/visual-studio/</guid>
+      <description>Microsoft Visual Studio #  This setup is available only for Windows.
+1. Dependencies #  Make sure that you have installed dependencies and installed Visual Studio.
+2. Cloning #  Clone https://github.com/matusnovak/temporary-escape.git (or your own fork) via command line or through the Visual Studio. You will also need to download the git submodules.
+git clone https://github.com/matusnovak/temporary-escape.git cd temporary-escape git submodule update --init 3. Open the project #  Open Visual Studio and open the cloned repository by choosing &amp;ldquo;Open a local folder&amp;rdquo; option.</description>
+    </item>
+    
+    <item>
+      <title>Asset Manager</title>
+      <link>https://temporary-escape.github.io/docs/contributing/architecture/asset-manager/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://temporary-escape.github.io/docs/contributing/architecture/asset-manager/</guid>
+      <description>Asset Manager #  Loading #  TBA
+Modding support #  TBA
+Types of assets #  TBA
+Next #  See Database page.</description>
+    </item>
+    
+    <item>
+      <title>Database</title>
+      <link>https://temporary-escape.github.io/docs/contributing/architecture/database/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://temporary-escape.github.io/docs/contributing/architecture/database/</guid>
+      <description>Database #  RocksDB #  TBA
+Serialization #  TBA
+Operations #  TBA
+Next #  See Entity Component System page.</description>
+    </item>
+    
+    <item>
+      <title>Entity Component System</title>
+      <link>https://temporary-escape.github.io/docs/contributing/architecture/ecs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://temporary-escape.github.io/docs/contributing/architecture/ecs/</guid>
+      <description>Entity Component System #  </description>
+    </item>
+    
+    <item>
+      <title>Scene</title>
+      <link>https://temporary-escape.github.io/docs/contributing/architecture/scene/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://temporary-escape.github.io/docs/contributing/architecture/scene/</guid>
+      <description>Scene #  </description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43; Dependencies</title>
+      <link>https://temporary-escape.github.io/docs/contributing/dependencies/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://temporary-escape.github.io/docs/contributing/dependencies/</guid>
+      <description>C++ Dependencies #  In order to build this game from the source you will need the following tools:
+  git Clang compiler with C++17 support or MSVC  vcpkg latest version  cmake version 3.10 or higher Some additional OS dependencies  MinGW or Cygwin
+Neither MinGW or Cygwin are officially supported. They might work but it is recommended to use Clang or MSVC.  Vcpkg must be installed through git</description>
+    </item>
+    
+    <item>
+      <title>Building</title>
+      <link>https://temporary-escape.github.io/docs/contributing/building/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://temporary-escape.github.io/docs/contributing/building/</guid>
+      <description>Building #  Manually building is boring. It is recommended that you use one of the IDEs as described here.  1. Prerequisites #  Make sure that you have installed dependencies
+2. Cloning #  Clone this project including its git submodules.
+git clone https://github.com/matusnovak/temporary-escape.git git submodule update --init 3. Configure project #  Last argument is a dot
+Don&amp;rsquo;t forget to specify which folder the CMake should run the configuration from.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="C&#43;&#43; Dependencies #  In order to build this game from the source you will need the following tools:
+  git Clang compiler with C&#43;&#43;17 support or MSVC  vcpkg latest version  cmake version 3.10 or higher Some additional OS dependencies  MinGW or Cygwin
+Neither MinGW or Cygwin are officially supported. They might work but it is recommended to use Clang or MSVC.  Vcpkg must be installed through git">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="C&#43;&#43; Dependencies" />
+<meta property="og:description" content="C&#43;&#43; Dependencies #  In order to build this game from the source you will need the following tools:
+  git Clang compiler with C&#43;&#43;17 support or MSVC  vcpkg latest version  cmake version 3.10 or higher Some additional OS dependencies  MinGW or Cygwin
+Neither MinGW or Cygwin are officially supported. They might work but it is recommended to use Clang or MSVC.  Vcpkg must be installed through git" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://temporary-escape.github.io/docs/contributing/dependencies/" /><meta property="article:section" content="docs" />
+
+<meta property="article:modified_time" content="2022-02-02T00:06:14+01:00" />
+
+<title>C&#43;&#43; Dependencies | Temporary Escape</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.e76cb45ac2d9b2d9a90c10314df7bf548e38e0672cfe705ac74755ebb2ae0b26.css" integrity="sha256-52y0WsLZstmpDBAxTfe/VI444Gcs/nBax0dV67KuCyY=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.f4c61933df7215dc02c58d9f87fd29b3506537755ea7a158709841f26f6e9723.js" integrity="sha256-9MYZM99yFdwCxY2fh/0ps1BlN3Vep6FYcJhB8m9ulyM=" crossorigin="anonymous"></script>
+
+  <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  <script defer language="javascript" type="text/javascript"  src="/js/download.js"></script>
+
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Temporary Escape</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/download/" class="">Download</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/about/" class="">About</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/media/" class="">Media</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/media/screenshots/" class="">Screenshots</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/codex/" class="">Codex</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/" class="">Contributing</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/todo/" class="">Things to do</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/dependencies/" class=" active">C&#43;&#43; Dependencies</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/setup/" class="">C&#43;&#43; Development Setup</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/setup/vscode/" class="">VS Code</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/setup/clion/" class="">CLion</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/setup/visual-studio/" class="">Visual Studio</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/building/" class="">Building</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/architecture/" class="">Engine Architecture</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/architecture/libraries/" class="">Libraries</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/architecture/overview/" class="">Overview</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/architecture/networking/" class="">Networking</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/architecture/server/" class="">Server</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/architecture/asset-manager/" class="">Asset Manager</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/architecture/database/" class="">Database</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/architecture/ecs/" class="">Entity Component System</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/architecture/scene/" class="">Scene</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Modding &amp; Assets</span>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var a=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>C&#43;&#43; Dependencies</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#c-dependencies">C++ Dependencies</a>
+      <ul>
+        <li><a href="#linux-debian">Linux (debian)</a></li>
+        <li><a href="#linux-arch">Linux (Arch)</a></li>
+        <li><a href="#windows">Windows</a></li>
+        <li><a href="#mac-osx">Mac OSX</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="c-dependencies">
+  C++ Dependencies
+  <a class="anchor" href="#c-dependencies">#</a>
+</h1>
+<p>In order to build this game from the source you will need the following tools:</p>
+<ul>
+<li>
+  <a href="https://git-scm.com/">git</a></li>
+<li>Clang compiler with C++17 support or MSVC</li>
+<li>
+  <a href="https://vcpkg.io/en/index.html">vcpkg</a> latest version</li>
+<li>
+  <a href="https://cmake.org/">cmake</a> version 3.10 or higher</li>
+<li>Some additional OS dependencies</li>
+</ul>
+<blockquote class="book-hint warning">
+  <strong>MinGW or Cygwin</strong><br>
+Neither MinGW or Cygwin are officially supported. They might work but it is recommended to use Clang or MSVC.
+</blockquote>
+
+<blockquote class="book-hint warning">
+  <strong>Vcpkg must be installed through git</strong><br>
+Vcpkg root folder must have a .git folder. Make sure that you have installed the tool via git clone. This is required because this project is using 
+  <a href="https://devblogs.microsoft.com/cppblog/take-control-of-your-vcpkg-dependencies-with-versioning-support/">vcpkg&rsquo;s versioning support</a> which requires that the vcpkg has access to git&rsquo;s commits in its root directory.
+</blockquote>
+
+<h2 id="linux-debian">
+  Linux (debian)
+  <a class="anchor" href="#linux-debian">#</a>
+</h2>
+<p>(Tested on Ubuntu 21.04)</p>
+<p>You will need to install the following dependencies:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt-get update
+
+<span style="color:#75715e"># Development packages</span>
+sudo apt-get install -y <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    build-essential git cmake ninja-build curl <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    zip unzip tar clang pkg-config <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    libxinerama-dev libxcursor-dev <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    xorg-dev libglu1-mesa-dev liburing-dev
+
+<span style="color:#75715e"># Install vcpkg</span>
+git clone https://github.com/Microsoft/vcpkg.git
+sudo mv ./vcpkg /opt/vcpkg
+sudo groupadd vcpkg
+sudo usermod -aG vcpkg $USER <span style="color:#75715e"># Adds the current user to the vcpkg group</span>
+sudo chown root:vcpkg -R /opt/vcpkg
+sudo chmod <span style="color:#ae81ff">775</span> -R /opt/vcpkg
+cd /opt/vcpkg <span style="color:#f92672">&amp;&amp;</span> sudo ./bootstrap-vcpkg.sh
+sudo ln -s /opt/vcpkg/vcpkg /usr/bin/vcpkg
+</code></pre></div><h2 id="linux-arch">
+  Linux (Arch)
+  <a class="anchor" href="#linux-arch">#</a>
+</h2>
+<p>(Tested on Manjaro 21.2.2)</p>
+<p>You will need to install the following dependencies:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Necessary system tools</span>
+sudo pacman -Syu
+
+<span style="color:#75715e"># Development packages</span>
+sudo pacman -Sy <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    git base-devel git cmake ninja <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    curl zip unzip tar clang
+
+<span style="color:#75715e"># Install vcpkg</span>
+git clone https://github.com/Microsoft/vcpkg.git
+sudo mv ./vcpkg /opt/vcpkg
+sudo groupadd vcpkg
+sudo usermod -aG vcpkg $USER <span style="color:#75715e"># Adds the current user to the vcpkg group</span>
+sudo chown root:vcpkg -R /opt/vcpkg
+sudo chmod <span style="color:#ae81ff">775</span> -R /opt/vcpkg
+cd /opt/vcpkg <span style="color:#f92672">&amp;&amp;</span> sudo ./bootstrap-vcpkg.sh
+sudo ln -s /opt/vcpkg/vcpkg /usr/bin/vcpkg
+</code></pre></div><h2 id="windows">
+  Windows
+  <a class="anchor" href="#windows">#</a>
+</h2>
+<p>(Tested on Windows 10 and Windows Server 2019)</p>
+<p><strong>First download and install 
+  <a href="https://visualstudio.microsoft.com/vs/community/">Visual Studio</a>.</strong></p>
+<p>Once installed, close it. Go to Start Menu and search for <code>Visual Studio Installer</code>.</p>
+<img alt="contributing/setup/vs-installer-start.png" src="https://temporary-escape.github.io/images/contributing/setup/vs-installer-start.png">
+
+<p>Once it opens, click &ldquo;Modify&rdquo; on the Visual Studio you have installed.</p>
+<img alt="contributing/setup/vs-installer-modify.png" src="https://temporary-escape.github.io/images/contributing/setup/vs-installer-modify.png">
+
+<p>Once in the modify windows enable the Desktop development with C++.</p>
+<img alt="contributing/setup/vs-installer-modify-cpp.png" src="https://temporary-escape.github.io/images/contributing/setup/vs-installer-modify-cpp.png">
+
+<p>Next go to the &ldquo;Individual Components&rdquo; and search for word &ldquo;Clang&rdquo; and enable the &ldquo;C++ Clang Compiler for Windows&rdquo;.</p>
+<img alt="contributing/setup/vs-installer-modify-clang.png" src="https://temporary-escape.github.io/images/contributing/setup/vs-installer-modify-clang.png">
+
+<p>Wait for it to download and install. Once it is done you can close the installer. Do not open Visual Studio yet.</p>
+<p>Lastly you will have to download and install vcpkg. Use the following commands below.</p>
+<pre tabindex="0"><code>cd C:\
+mkdir tools
+cd C:\tools\
+git clone https://github.com/Microsoft/vcpkg.git
+cd C:\tools\vcpkg\
+bootstrap-vcpkg.bat
+.\vcpkg integrate install
+</code></pre><p>The <code>vcpkg integrate install</code> command will integrate vcpkg with Visual Studio.</p>
+<p>Next, we will have to make sure that the <code>vcpkg.exe</code> executable is available to the entire system. Go to the Start Menu and search for &ldquo;environment&rdquo; and choose &ldquo;Edit the system environment variables&rdquo;.</p>
+<img alt="contributing/setup/vs-windows-environment.png" src="https://temporary-escape.github.io/images/contributing/setup/vs-windows-environment.png">
+
+<p>In the new windows click the &ldquo;Environment Variables&hellip;&rdquo; button.</p>
+<img alt="contributing/setup/vs-windows-system-properties.png" src="https://temporary-escape.github.io/images/contributing/setup/vs-windows-system-properties.png">
+
+<p>Find the &ldquo;PATH&rdquo; variable in the &ldquo;System variables&rdquo; and edit it.</p>
+<img alt="contributing/setup/vs-windows-environment-variables.png" src="https://temporary-escape.github.io/images/contributing/setup/vs-windows-environment-variables.png">
+
+<p>Add the <code>C:\tools\vcpkg</code> path to the variable. This path may be different if you have chosen to install vcpkg to some other location.</p>
+<img alt="contributing/setup/vs-windows-path.png" src="https://temporary-escape.github.io/images/contributing/setup/vs-windows-path.png">
+
+<p>No additional dependencies are needed. Now you can 
+  <a href="https://temporary-escape.github.io/docs/contributing/setup/visual-studio/">open the project with Visual Studio and configure CMake settings</a>.</p>
+<h2 id="mac-osx">
+  Mac OSX
+  <a class="anchor" href="#mac-osx">#</a>
+</h2>
+<p>TBA</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew install llvm cmake git ninja
+</code></pre></div></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+  <div><a class="flex align-center" href="https://github.com/matusnovak/temporary-escape/commit/f28caef0682d184f1e8eabf33f30d5e969c0f958" title='Last modified by Matus Novak | February 1, 2022' target="_blank" rel="noopener">
+      <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>February 1, 2022</span>
+    </a>
+  </div>
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/matusnovak/temporary-escape/edit/master/docs/content/docs/contributing/dependencies.md" target="_blank" rel="noopener">
+      <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+
+</div>
+
+
+
+  <script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#c-dependencies">C++ Dependencies</a>
+      <ul>
+        <li><a href="#linux-debian">Linux (debian)</a></li>
+        <li><a href="#linux-arch">Linux (Arch)</a></li>
+        <li><a href="#windows">Windows</a></li>
+        <li><a href="#mac-osx">Mac OSX</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

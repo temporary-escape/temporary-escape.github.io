@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Contributing on Temporary Escape</title>
+    <link>https://temporary-escape.github.io/docs/contributing/</link>
+    <description>Recent content in Contributing on Temporary Escape</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://temporary-escape.github.io/docs/contributing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Things to do</title>
+      <link>https://temporary-escape.github.io/docs/contributing/todo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://temporary-escape.github.io/docs/contributing/todo/</guid>
+      <description>Things to do #  </description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43; Dependencies</title>
+      <link>https://temporary-escape.github.io/docs/contributing/dependencies/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://temporary-escape.github.io/docs/contributing/dependencies/</guid>
+      <description>C++ Dependencies #  In order to build this game from the source you will need the following tools:
+  git Clang compiler with C++17 support or MSVC  vcpkg latest version  cmake version 3.10 or higher Some additional OS dependencies  MinGW or Cygwin
+Neither MinGW or Cygwin are officially supported. They might work but it is recommended to use Clang or MSVC.  Vcpkg must be installed through git</description>
+    </item>
+    
+    <item>
+      <title>Building</title>
+      <link>https://temporary-escape.github.io/docs/contributing/building/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://temporary-escape.github.io/docs/contributing/building/</guid>
+      <description>Building #  Manually building is boring. It is recommended that you use one of the IDEs as described here.  1. Prerequisites #  Make sure that you have installed dependencies
+2. Cloning #  Clone this project including its git submodules.
+git clone https://github.com/matusnovak/temporary-escape.git git submodule update --init 3. Configure project #  Last argument is a dot
+Don&amp;rsquo;t forget to specify which folder the CMake should run the configuration from.</description>
+    </item>
+    
+  </channel>
+</rss>

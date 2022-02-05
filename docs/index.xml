@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Documentation on Temporary Escape</title>
+    <link>https://temporary-escape.github.io/docs/</link>
+    <description>Recent content in Documentation on Temporary Escape</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://temporary-escape.github.io/docs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Download</title>
+      <link>https://temporary-escape.github.io/docs/download/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://temporary-escape.github.io/docs/download/</guid>
+      <description>Download #  Latest releases #  Loading&amp;hellip; #  </description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://temporary-escape.github.io/docs/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://temporary-escape.github.io/docs/about/</guid>
+      <description>About #  </description>
+    </item>
+    
+  </channel>
+</rss>

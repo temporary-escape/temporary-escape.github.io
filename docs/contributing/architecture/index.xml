@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Engine Architecture on Temporary Escape</title>
+    <link>https://temporary-escape.github.io/docs/contributing/architecture/</link>
+    <description>Recent content in Engine Architecture on Temporary Escape</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://temporary-escape.github.io/docs/contributing/architecture/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Libraries</title>
+      <link>https://temporary-escape.github.io/docs/contributing/architecture/libraries/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://temporary-escape.github.io/docs/contributing/architecture/libraries/</guid>
+      <description>Libraries #  List of libraries used in this game.
+  wren - Wren, an embeddable scripting language. Used for scripting purposes and modding.  wrenbind17 - A header only library for binding C++17 to Wren language.  nuklear - A single-header ANSI C immediate mode cross-platform GUI library.  zlib - Needed by libpng.  glfw3 - Window and OpenGL context management.  glm - OpenGL header only C++ mathematics library.</description>
+    </item>
+    
+    <item>
+      <title>Overview</title>
+      <link>https://temporary-escape.github.io/docs/contributing/architecture/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://temporary-escape.github.io/docs/contributing/architecture/overview/</guid>
+      <description>Architecture Overview #  Here is a rough diagram of architecture and component ownership. For example, The Application is responsible for the AssetManager. More details of each component is described further down in this page. To have more in-depth information, it is highly recommended to start with the networking page.
+ mermaid.initialize({ &#34;theme&#34;: &#34;dark&#34; }) flowchart LR Main -- Application Application -- Renderer Application -- AssetManager Application -- ModManager Application -- Server Server -- Sector Sector -- Scene Server -- Database Server -- Services Server -- TCP-Server Application -- Client Client -- TCP-Client Client -- Scene-Proxy Client -- Store/Cache Application -- Views TCP-Server -- *TCP* TCP-Client -- *TCP* Example of an asteroid #  The following is an example of data flow, and what roughly happens, when we want to display a simple scene with an entity (such as an steroid) to the player once they connect to the server.</description>
+    </item>
+    
+    <item>
+      <title>Networking</title>
+      <link>https://temporary-escape.github.io/docs/contributing/architecture/networking/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://temporary-escape.github.io/docs/contributing/architecture/networking/</guid>
+      <description>Networking #  Client Server model #  The game works in a classic client-server model. Server is responsible for simulating the world and persisting the data. The client is responsible for reading the information provided by the server and render it.
+There is no lockstep protocol or any similar mechanism that you may find in an FPS game. The client sends &amp;ldquo;commands&amp;rdquo; to the server. One of such command can be &amp;ldquo;approach this enemy NPC&amp;rdquo; while you are in your own player ship.</description>
+    </item>
+    
+    <item>
+      <title>Server</title>
+      <link>https://temporary-escape.github.io/docs/contributing/architecture/server/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://temporary-escape.github.io/docs/contributing/architecture/server/</guid>
+      <description>Server #  Tick #  TBA
+Sectors and scenes #  TBA
+Next #  See Asset Manager page.</description>
+    </item>
+    
+    <item>
+      <title>Asset Manager</title>
+      <link>https://temporary-escape.github.io/docs/contributing/architecture/asset-manager/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://temporary-escape.github.io/docs/contributing/architecture/asset-manager/</guid>
+      <description>Asset Manager #  Loading #  TBA
+Modding support #  TBA
+Types of assets #  TBA
+Next #  See Database page.</description>
+    </item>
+    
+    <item>
+      <title>Database</title>
+      <link>https://temporary-escape.github.io/docs/contributing/architecture/database/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://temporary-escape.github.io/docs/contributing/architecture/database/</guid>
+      <description>Database #  RocksDB #  TBA
+Serialization #  TBA
+Operations #  TBA
+Next #  See Entity Component System page.</description>
+    </item>
+    
+    <item>
+      <title>Entity Component System</title>
+      <link>https://temporary-escape.github.io/docs/contributing/architecture/ecs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://temporary-escape.github.io/docs/contributing/architecture/ecs/</guid>
+      <description>Entity Component System #  </description>
+    </item>
+    
+    <item>
+      <title>Scene</title>
+      <link>https://temporary-escape.github.io/docs/contributing/architecture/scene/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://temporary-escape.github.io/docs/contributing/architecture/scene/</guid>
+      <description>Scene #  </description>
+    </item>
+    
+  </channel>
+</rss>

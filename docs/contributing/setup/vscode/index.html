@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Visual Studio Code #  This setup is suitable for Windows, Linux, or Mac OSX.
+1. Dependencies #  Make sure that you have installed dependencies and installed VSCode.
+2. Cloning #  Clone https://github.com/matusnovak/temporary-escape.git (or your own fork) via command line or through the GitHub VSCode extension. Open the temporary-folder through VS Code. You will also need to download the git submodules.
+git clone https://github.com/matusnovak/temporary-escape.git cd temporary-escape git submodule update --init 3.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="VS Code" />
+<meta property="og:description" content="Visual Studio Code #  This setup is suitable for Windows, Linux, or Mac OSX.
+1. Dependencies #  Make sure that you have installed dependencies and installed VSCode.
+2. Cloning #  Clone https://github.com/matusnovak/temporary-escape.git (or your own fork) via command line or through the GitHub VSCode extension. Open the temporary-folder through VS Code. You will also need to download the git submodules.
+git clone https://github.com/matusnovak/temporary-escape.git cd temporary-escape git submodule update --init 3." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://temporary-escape.github.io/docs/contributing/setup/vscode/" /><meta property="article:section" content="docs" />
+
+<meta property="article:modified_time" content="2022-01-31T23:59:33+01:00" />
+
+<title>VS Code | Temporary Escape</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.e76cb45ac2d9b2d9a90c10314df7bf548e38e0672cfe705ac74755ebb2ae0b26.css" integrity="sha256-52y0WsLZstmpDBAxTfe/VI444Gcs/nBax0dV67KuCyY=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.f4c61933df7215dc02c58d9f87fd29b3506537755ea7a158709841f26f6e9723.js" integrity="sha256-9MYZM99yFdwCxY2fh/0ps1BlN3Vep6FYcJhB8m9ulyM=" crossorigin="anonymous"></script>
+
+  <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  <script defer language="javascript" type="text/javascript"  src="/js/download.js"></script>
+
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Temporary Escape</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/download/" class="">Download</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/about/" class="">About</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/media/" class="">Media</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/media/screenshots/" class="">Screenshots</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/codex/" class="">Codex</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/" class="">Contributing</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/todo/" class="">Things to do</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/dependencies/" class="">C&#43;&#43; Dependencies</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/setup/" class="">C&#43;&#43; Development Setup</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/setup/vscode/" class=" active">VS Code</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/setup/clion/" class="">CLion</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/setup/visual-studio/" class="">Visual Studio</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/building/" class="">Building</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/architecture/" class="">Engine Architecture</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/architecture/libraries/" class="">Libraries</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/architecture/overview/" class="">Overview</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/architecture/networking/" class="">Networking</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/architecture/server/" class="">Server</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/architecture/asset-manager/" class="">Asset Manager</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/architecture/database/" class="">Database</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/architecture/ecs/" class="">Entity Component System</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/architecture/scene/" class="">Scene</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Modding &amp; Assets</span>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var a=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>VS Code</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#visual-studio-code">Visual Studio Code</a>
+      <ul>
+        <li><a href="#1-dependencies">1. Dependencies</a></li>
+        <li><a href="#2-cloning">2. Cloning</a></li>
+        <li><a href="#3-settings">3. Settings</a></li>
+        <li><a href="#4-selecting-kit">4. Selecting kit</a></li>
+        <li><a href="#5-configure">5. Configure</a></li>
+        <li><a href="#6-build">6. Build</a></li>
+        <li><a href="#7-launch-settings">7. Launch settings</a></li>
+        <li><a href="#8-debugging">8. Debugging</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="visual-studio-code">
+  Visual Studio Code
+  <a class="anchor" href="#visual-studio-code">#</a>
+</h1>
+<p>This setup is suitable for Windows, Linux, or Mac OSX.</p>
+<h2 id="1-dependencies">
+  1. Dependencies
+  <a class="anchor" href="#1-dependencies">#</a>
+</h2>
+<p>Make sure that you have installed 
+  <a href="https://temporary-escape.github.io/docs/contributing/dependencies/">dependencies</a> and installed 
+  <a href="https://code.visualstudio.com/">VSCode</a>.</p>
+<h2 id="2-cloning">
+  2. Cloning
+  <a class="anchor" href="#2-cloning">#</a>
+</h2>
+<p>Clone <code>https://github.com/matusnovak/temporary-escape.git</code> (or your own fork) via command line or through the GitHub VSCode extension. Open the <code>temporary-folder</code> through VS Code. You will also need to download the git submodules.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone https://github.com/matusnovak/temporary-escape.git
+cd temporary-escape
+git submodule update --init
+</code></pre></div><h2 id="3-settings">
+  3. Settings
+  <a class="anchor" href="#3-settings">#</a>
+</h2>
+<p>You will need to set some CMake/C++ related settings in VSCode for this project. Create a <code>.vscode</code> folder within the project root folder and add add a file <code>settings.json</code> with the following contents below. Your <code>/opt/vcpkg</code> may differ, depending on where you have installed your vcpkg.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+    <span style="color:#f92672">&#34;cmake.configureOnOpen&#34;</span>: <span style="color:#66d9ef">false</span>,
+    <span style="color:#f92672">&#34;cmake.configureSettings&#34;</span>: {
+        <span style="color:#f92672">&#34;CMAKE_TOOLCHAIN_FILE&#34;</span>: <span style="color:#e6db74">&#34;/opt/vcpkg/scripts/buildsystems/vcpkg.cmake&#34;</span>
+    },
+    <span style="color:#f92672">&#34;[cpp]&#34;</span>: {
+        <span style="color:#f92672">&#34;editor.defaultFormatter&#34;</span>: <span style="color:#e6db74">&#34;ms-vscode.cpptools&#34;</span>,
+        <span style="color:#f92672">&#34;editor.formatOnSave&#34;</span>: <span style="color:#66d9ef">true</span>
+    }
+}
+</code></pre></div><h2 id="4-selecting-kit">
+  4. Selecting kit
+  <a class="anchor" href="#4-selecting-kit">#</a>
+</h2>
+<p>Press [Ctrl] + [P] and type <code>&gt; cmake kit</code>. It should bring up the following options. Choose <code>CMake: Select a kit</code>.</p>
+<img alt="contributing/setup/vscode-cmake-kit-select.png" src="https://temporary-escape.github.io/images/contributing/setup/vscode-cmake-kit-select.png">
+
+<p>And then select Clang</p>
+<img alt="contributing/setup/vscode-cmake-kit-clang.png" src="https://temporary-escape.github.io/images/contributing/setup/vscode-cmake-kit-clang.png">
+
+<h2 id="5-configure">
+  5. Configure
+  <a class="anchor" href="#5-configure">#</a>
+</h2>
+<p>Press [Ctrl] + [P] and type <code>&gt; cmake configure</code> and select the first option. This may take few minutes to complete. CMake and vcpkg will download and install all the required C++ libraries.</p>
+<img alt="contributing/setup/vscode-cmake-configure.png" src="https://temporary-escape.github.io/images/contributing/setup/vscode-cmake-configure.png">
+
+<p>After a successful configuration you should see the following in the &ldquo;Output&rdquo; window:</p>
+<pre tabindex="0"><code>[cmake] -- Configuring done
+[cmake] -- Generating done
+[cmake] -- Build files have been written to: /home/mnovak/Projects/temporary-escape/build
+</code></pre><h2 id="6-build">
+  6. Build
+  <a class="anchor" href="#6-build">#</a>
+</h2>
+<p>Press [Ctrl] + [P] and type <code>&gt; cmake set build target</code>.</p>
+<img alt="contributing/setup/vscode-cmake-build-target-select.png" src="https://temporary-escape.github.io/images/contributing/setup/vscode-cmake-build-target-select.png">
+
+<p>Choose <code>TemporaryEscapeMain</code> from the selection.</p>
+<img alt="contributing/setup/vscode-cmake-build-target.png" src="https://temporary-escape.github.io/images/contributing/setup/vscode-cmake-build-target.png">
+
+<p>And finally do the same thing for <code>&gt; cmake build</code>.</p>
+<img alt="contributing/setup/vscode-cmake-build.png" src="https://temporary-escape.github.io/images/contributing/setup/vscode-cmake-build.png">
+
+<p>You should see the following in the &ldquo;Output&rdquo; window:</p>
+<pre tabindex="0"><code>[build] [...] Linking CXX executable src/TemporaryEscape/TemporaryEscape
+[build] Build finished with exit code 0
+</code></pre><h2 id="7-launch-settings">
+  7. Launch settings
+  <a class="anchor" href="#7-launch-settings">#</a>
+</h2>
+<p>Before you can run and debug this game, you will need to create launch configuration. In the <code>.vscode</code> folder (in project&rsquo;s root folder) create a file <code>launch.json</code> with the following contents below. This is a minimal configuration that you will need. The <code>--root</code> argument is needed because by default the <code>TemporaryEscape</code> executable expects <code>assets</code> and <code>shaders</code> folders to be located exactly 1 folder above, which is not the case during the development work. Using <code>--root ${workspaceFolder}</code> fixes any issues.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+    <span style="color:#75715e">// Use IntelliSense to learn about possible attributes.
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// Hover to view descriptions of existing attributes.
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+</span><span style="color:#75715e"></span>    <span style="color:#f92672">&#34;version&#34;</span>: <span style="color:#e6db74">&#34;0.2.0&#34;</span>,
+    <span style="color:#f92672">&#34;configurations&#34;</span>: [
+        {
+            <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;(gdb) Launch&#34;</span>,
+            <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;cppdbg&#34;</span>,
+            <span style="color:#f92672">&#34;request&#34;</span>: <span style="color:#e6db74">&#34;launch&#34;</span>,
+            <span style="color:#f92672">&#34;program&#34;</span>: <span style="color:#e6db74">&#34;${command:cmake.launchTargetPath}&#34;</span>,
+            <span style="color:#f92672">&#34;args&#34;</span>: [
+                <span style="color:#e6db74">&#34;--root&#34;</span>,
+                <span style="color:#e6db74">&#34;${workspaceFolder}&#34;</span>
+            ],
+            <span style="color:#f92672">&#34;stopAtEntry&#34;</span>: <span style="color:#66d9ef">false</span>,
+            <span style="color:#f92672">&#34;cwd&#34;</span>: <span style="color:#e6db74">&#34;${command:cmake.launchTargetDirectory}&#34;</span>,
+            <span style="color:#f92672">&#34;environment&#34;</span>: [],
+            <span style="color:#f92672">&#34;externalConsole&#34;</span>: <span style="color:#66d9ef">false</span>,
+            <span style="color:#f92672">&#34;MIMode&#34;</span>: <span style="color:#e6db74">&#34;gdb&#34;</span>,
+            <span style="color:#f92672">&#34;setupCommands&#34;</span>: [
+                {
+                    <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;Enable pretty-printing for gdb&#34;</span>,
+                    <span style="color:#f92672">&#34;text&#34;</span>: <span style="color:#e6db74">&#34;-enable-pretty-printing&#34;</span>,
+                    <span style="color:#f92672">&#34;ignoreFailures&#34;</span>: <span style="color:#66d9ef">true</span>
+                }
+            ],
+            <span style="color:#f92672">&#34;preLaunchTask&#34;</span>: <span style="color:#e6db74">&#34;CMake Build&#34;</span>
+        }
+    ]
+}
+</code></pre></div><p>Additionally, create <code>tasks.json</code> within the same <code>.vscode</code> folder with the following contents below.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+    <span style="color:#75715e">// See https://go.microsoft.com/fwlink/?LinkId=733558
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// for the documentation about the tasks.json format
+</span><span style="color:#75715e"></span>    <span style="color:#f92672">&#34;version&#34;</span>: <span style="color:#e6db74">&#34;2.0.0&#34;</span>,
+    <span style="color:#f92672">&#34;tasks&#34;</span>: [
+        {
+            <span style="color:#f92672">&#34;label&#34;</span>: <span style="color:#e6db74">&#34;CMake Build&#34;</span>,
+            <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;cmake&#34;</span>,
+            <span style="color:#f92672">&#34;command&#34;</span>: <span style="color:#e6db74">&#34;build&#34;</span>
+        }
+    ]
+}
+</code></pre></div><h2 id="8-debugging">
+  8. Debugging
+  <a class="anchor" href="#8-debugging">#</a>
+</h2>
+<p>Now you can simply run it through the GUI by selecting Run -&gt; Start Debugging from the top main bar, or by pressing [Ctrl] + [P] and selecting <code>&gt; Debug: Start Debugging</code>.</p>
+<img alt="contributing/setup/vscode-start-debugging.png" src="https://temporary-escape.github.io/images/contributing/setup/vscode-start-debugging.png">
+
+<p>This will automatically compile any changes you have made. After the compilation is done, the game should open and you should see a new window. Once you close the game, you should see &ldquo;has exited with code 0&rdquo; in the &ldquo;Debug Console&rdquo;.</p>
+<p>Here is an example of &ldquo;Debug Console&rdquo; where you would find stacktraces if the game would crash.</p>
+<img alt="contributing/setup/vscode-debug-console.png" src="https://temporary-escape.github.io/images/contributing/setup/vscode-debug-console.png">
+
+<p>Switch to the &ldquo;Terminal&rdquo; to see the logging output.</p>
+<img alt="contributing/setup/vscode-terminal-logs.png" src="https://temporary-escape.github.io/images/contributing/setup/vscode-terminal-logs.png">
+
+<p>That&rsquo;s all.</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+  <div><a class="flex align-center" href="https://github.com/matusnovak/temporary-escape/commit/f98815bdc24fd65dfe576b8e3485a2d5ef054ae7" title='Last modified by Matus Novak | January 31, 2022' target="_blank" rel="noopener">
+      <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>January 31, 2022</span>
+    </a>
+  </div>
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/matusnovak/temporary-escape/edit/master/docs/content/docs/contributing/setup/vscode.md" target="_blank" rel="noopener">
+      <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+
+</div>
+
+
+
+  <script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#visual-studio-code">Visual Studio Code</a>
+      <ul>
+        <li><a href="#1-dependencies">1. Dependencies</a></li>
+        <li><a href="#2-cloning">2. Cloning</a></li>
+        <li><a href="#3-settings">3. Settings</a></li>
+        <li><a href="#4-selecting-kit">4. Selecting kit</a></li>
+        <li><a href="#5-configure">5. Configure</a></li>
+        <li><a href="#6-build">6. Build</a></li>
+        <li><a href="#7-launch-settings">7. Launch settings</a></li>
+        <li><a href="#8-debugging">8. Debugging</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

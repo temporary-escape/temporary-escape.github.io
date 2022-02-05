@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Libraries #  List of libraries used in this game.
+  wren - Wren, an embeddable scripting language. Used for scripting purposes and modding.  wrenbind17 - A header only library for binding C&#43;&#43;17 to Wren language.  nuklear - A single-header ANSI C immediate mode cross-platform GUI library.  zlib - Needed by libpng.  glfw3 - Window and OpenGL context management.  glm - OpenGL header only C&#43;&#43; mathematics library.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Libraries" />
+<meta property="og:description" content="Libraries #  List of libraries used in this game.
+  wren - Wren, an embeddable scripting language. Used for scripting purposes and modding.  wrenbind17 - A header only library for binding C&#43;&#43;17 to Wren language.  nuklear - A single-header ANSI C immediate mode cross-platform GUI library.  zlib - Needed by libpng.  glfw3 - Window and OpenGL context management.  glm - OpenGL header only C&#43;&#43; mathematics library." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://temporary-escape.github.io/docs/contributing/architecture/libraries/" /><meta property="article:section" content="docs" />
+
+<meta property="article:modified_time" content="2022-02-02T01:02:32+01:00" />
+
+<title>Libraries | Temporary Escape</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.e76cb45ac2d9b2d9a90c10314df7bf548e38e0672cfe705ac74755ebb2ae0b26.css" integrity="sha256-52y0WsLZstmpDBAxTfe/VI444Gcs/nBax0dV67KuCyY=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.f4c61933df7215dc02c58d9f87fd29b3506537755ea7a158709841f26f6e9723.js" integrity="sha256-9MYZM99yFdwCxY2fh/0ps1BlN3Vep6FYcJhB8m9ulyM=" crossorigin="anonymous"></script>
+
+  <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  <script defer language="javascript" type="text/javascript"  src="/js/download.js"></script>
+
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Temporary Escape</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/download/" class="">Download</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/about/" class="">About</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/media/" class="">Media</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/media/screenshots/" class="">Screenshots</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/codex/" class="">Codex</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/" class="">Contributing</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/todo/" class="">Things to do</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/dependencies/" class="">C&#43;&#43; Dependencies</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/setup/" class="">C&#43;&#43; Development Setup</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/setup/vscode/" class="">VS Code</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/setup/clion/" class="">CLion</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/setup/visual-studio/" class="">Visual Studio</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/building/" class="">Building</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/architecture/" class="">Engine Architecture</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/architecture/libraries/" class=" active">Libraries</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/architecture/overview/" class="">Overview</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/architecture/networking/" class="">Networking</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/architecture/server/" class="">Server</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/architecture/asset-manager/" class="">Asset Manager</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/architecture/database/" class="">Database</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/architecture/ecs/" class="">Entity Component System</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/architecture/scene/" class="">Scene</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Modding &amp; Assets</span>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var a=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Libraries</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#libraries">Libraries</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="libraries">
+  Libraries
+  <a class="anchor" href="#libraries">#</a>
+</h1>
+<p>List of libraries used in this game.</p>
+<ul>
+<li>
+  <a href="https://wren.io/">wren</a> - Wren, an embeddable scripting language. Used for scripting purposes and modding.</li>
+<li>
+  <a href="https://github.com/matusnovak/wrenbind17">wrenbind17</a> - A header only library for binding C++17 to Wren language.</li>
+<li>
+  <a href="https://github.com/Immediate-Mode-UI/Nuklear">nuklear</a> - A single-header ANSI C immediate mode cross-platform GUI library.</li>
+<li>
+  <a href="https://zlib.net/">zlib</a> - Needed by libpng.</li>
+<li>
+  <a href="https://www.glfw.org/">glfw3</a> - Window and OpenGL context management.</li>
+<li>
+  <a href="https://github.com/g-truc/glm">glm</a> - OpenGL header only C++ mathematics library.</li>
+<li>
+  <a href="https://glad.dav1d.de/">glad</a> - OpenGL extensions loader header only library.</li>
+<li>
+  <a href="https://github.com/fmtlib/fmt">fmt</a> - Formatting library providing a fast and safe alternative to C stdio and C++ iostreams.</li>
+<li>
+  <a href="http://xmlsoft.org/">libxml2</a> - XML C parser and toolkit developed for the Gnome project.</li>
+<li>
+  <a href="https://github.com/memononen/nanovg">nanovg</a> - NanoVG is small antialiased vector graphics rendering library for OpenGL. Used for rendering simple shapes, text, and the GUI.</li>
+<li>
+  <a href="http://www.libpng.org/pub/png/libpng.html">libpng</a> - Official PNG reference library. Used for loading png assets.</li>
+<li>
+  <a href="https://github.com/jkuhlmann/cgltf">cgltf</a> - Single-file/stb-style C glTF loader and writer. Used for loading gltf assets.</li>
+<li>
+  <a href="https://msgpack.org/index.html">msgpack-c</a> - MessagePack is an efficient binary serialization format. Used for data structure serialization and deserialization in the networking stack and the database.</li>
+<li>
+  <a href="https://think-async.com/Asio/">asio</a> - A cross-platform C++ library for network and low-level I/O programming. Used for low level networking and background workers.</li>
+<li>
+  <a href="https://github.com/nothings/stb">stb</a> - Single-file public domain libraries. Only the <code>stb_rect_pack.h</code> part is used for packing images into image atlases.</li>
+<li>
+  <a href="https://github.com/catchorg/Catch2">catch2</a> - A modern, C++-native, test framework for unit-tests. Used for unit tests and functional tests.</li>
+<li>
+  <a href="https://github.com/gabime/spdlog">spdlog</a> - Fast C++ logging library.</li>
+<li>
+  <a href="https://github.com/CLIUtils/CLI11">cli11</a> - Command line parser for C++11 and beyond that provides a rich feature set with a simple and intuitive interface.</li>
+<li>
+  <a href="https://freetype.org/">freetype</a> - True type font loader and glyph renderer. Used by nanovg to load and render fonts.</li>
+<li>
+  <a href="http://rocksdb.org/">rocksdb</a> - An embeddable persistent key-value store for fast storage. Used as a data store (with msgpack) to persistently store world data.</li>
+<li>
+  <a href="https://www.openssl.org/">openssl</a> - Toolkit for general-purpose cryptography and secure communication. Used on top of a custom networking stack with asio.</li>
+<li>
+  <a href="https://linux.die.net/man/3/libuuid">libuuid</a> (Linux &amp; Mac OSX only) - Used for generating UUID strings.</li>
+<li>
+  <a href="https://github.com/xz-mirror/xz">liblzma</a> - Free general-purpose data compression software with high compression ratio.</li>
+</ul>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+  <div><a class="flex align-center" href="https://github.com/matusnovak/temporary-escape/commit/9fa521ee7e6060d615647a414fe13a67e67a7bf7" title='Last modified by Matus Novak | February 2, 2022' target="_blank" rel="noopener">
+      <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>February 2, 2022</span>
+    </a>
+  </div>
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/matusnovak/temporary-escape/edit/master/docs/content/docs/contributing/architecture/libraries.md" target="_blank" rel="noopener">
+      <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+
+</div>
+
+
+
+  <script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#libraries">Libraries</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

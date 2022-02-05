@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Building #  Manually building is boring. It is recommended that you use one of the IDEs as described here.  1. Prerequisites #  Make sure that you have installed dependencies
+2. Cloning #  Clone this project including its git submodules.
+git clone https://github.com/matusnovak/temporary-escape.git git submodule update --init 3. Configure project #  Last argument is a dot
+Don&rsquo;t forget to specify which folder the CMake should run the configuration from.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Building" />
+<meta property="og:description" content="Building #  Manually building is boring. It is recommended that you use one of the IDEs as described here.  1. Prerequisites #  Make sure that you have installed dependencies
+2. Cloning #  Clone this project including its git submodules.
+git clone https://github.com/matusnovak/temporary-escape.git git submodule update --init 3. Configure project #  Last argument is a dot
+Don&rsquo;t forget to specify which folder the CMake should run the configuration from." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://temporary-escape.github.io/docs/contributing/building/" /><meta property="article:section" content="docs" />
+
+<meta property="article:modified_time" content="2022-02-02T00:06:14+01:00" />
+
+<title>Building | Temporary Escape</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.e76cb45ac2d9b2d9a90c10314df7bf548e38e0672cfe705ac74755ebb2ae0b26.css" integrity="sha256-52y0WsLZstmpDBAxTfe/VI444Gcs/nBax0dV67KuCyY=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.f4c61933df7215dc02c58d9f87fd29b3506537755ea7a158709841f26f6e9723.js" integrity="sha256-9MYZM99yFdwCxY2fh/0ps1BlN3Vep6FYcJhB8m9ulyM=" crossorigin="anonymous"></script>
+
+  <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  <script defer language="javascript" type="text/javascript"  src="/js/download.js"></script>
+
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Temporary Escape</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/download/" class="">Download</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/about/" class="">About</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/media/" class="">Media</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/media/screenshots/" class="">Screenshots</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/codex/" class="">Codex</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/" class="">Contributing</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/todo/" class="">Things to do</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/dependencies/" class="">C&#43;&#43; Dependencies</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/setup/" class="">C&#43;&#43; Development Setup</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/setup/vscode/" class="">VS Code</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/setup/clion/" class="">CLion</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/setup/visual-studio/" class="">Visual Studio</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/building/" class=" active">Building</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/architecture/" class="">Engine Architecture</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/architecture/libraries/" class="">Libraries</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/architecture/overview/" class="">Overview</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/architecture/networking/" class="">Networking</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/architecture/server/" class="">Server</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/architecture/asset-manager/" class="">Asset Manager</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/architecture/database/" class="">Database</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/architecture/ecs/" class="">Entity Component System</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://temporary-escape.github.io/docs/contributing/architecture/scene/" class="">Scene</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Modding &amp; Assets</span>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var a=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Building</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#building">Building</a>
+      <ul>
+        <li><a href="#1-prerequisites">1. Prerequisites</a></li>
+        <li><a href="#2-cloning">2. Cloning</a></li>
+        <li><a href="#3-configure-project">3. Configure project</a>
+          <ul>
+            <li><a href="#linux">Linux</a></li>
+            <li><a href="#windows">Windows</a></li>
+            <li><a href="#mac-osx">Mac OSX</a></li>
+          </ul>
+        </li>
+        <li><a href="#build">Build</a></li>
+        <li><a href="#4-running">4. Running</a>
+          <ul>
+            <li><a href="#linux-1">Linux</a></li>
+            <li><a href="#windows-1">Windows</a></li>
+            <li><a href="#mac-osx-1">Mac OSX</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="building">
+  Building
+  <a class="anchor" href="#building">#</a>
+</h1>
+<blockquote class="book-hint info">
+  Manually building is boring. It is recommended that you use one of the IDEs as described 
+  <a href="https://temporary-escape.github.io/docs/contributing/setup/">here</a>.
+</blockquote>
+
+<h2 id="1-prerequisites">
+  1. Prerequisites
+  <a class="anchor" href="#1-prerequisites">#</a>
+</h2>
+<p>Make sure that you have installed 
+  <a href="https://temporary-escape.github.io/docs/contributing/dependencies/">dependencies</a></p>
+<h2 id="2-cloning">
+  2. Cloning
+  <a class="anchor" href="#2-cloning">#</a>
+</h2>
+<p>Clone this project including its git submodules.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone https://github.com/matusnovak/temporary-escape.git
+git submodule update --init
+</code></pre></div><h2 id="3-configure-project">
+  3. Configure project
+  <a class="anchor" href="#3-configure-project">#</a>
+</h2>
+<blockquote class="book-hint warning">
+  <strong>Last argument is a dot</strong><br>
+Don&rsquo;t forget to specify which folder the CMake should run the configuration from. The last argument must be <code>.</code>, the current folder.
+</blockquote>
+
+<h3 id="linux">
+  Linux
+  <a class="anchor" href="#linux">#</a>
+</h3>
+<p>Find where Clang++ is located on your system. This is not needed if using Visual Studio.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">which clang++
+<span style="color:#75715e"># Should output: /usr/bin/clang++</span>
+</code></pre></div><p>Configure the project by specifying vcpkg toolchain file and Clang compiler. This will use vcpkg to download and install all required C++ libraries. This may take few minutes, but needs to be done only once.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd temporary-escape
+mkdir build
+CC<span style="color:#f92672">=</span>/usr/bin/clang CXX<span style="color:#f92672">=</span>/usr/bin/clang++ cmake <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -B ./build <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -G <span style="color:#e6db74">&#34;Ninja&#34;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -DTEMPORARY_ESCAPE_BUILD_TESTS<span style="color:#f92672">=</span>ON <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -DCMAKE_BUILD_TYPE<span style="color:#f92672">=</span>Debug <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -DCMAKE_TOOLCHAIN_FILE<span style="color:#f92672">=</span>/opt/vcpkg/scripts/buildsystems/vcpkg.cmake .
+</code></pre></div><h3 id="windows">
+  Windows
+  <a class="anchor" href="#windows">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat"><span style="color:#66d9ef">cd</span> temporary-escape
+<span style="color:#66d9ef">mkdir</span> build
+cmake \
+    -B ./build \
+    -G <span style="color:#e6db74">&#34;Visual Studio 19 2019&#34;</span> -A x64 -T ClangCL \
+    -DTEMPORARY_ESCAPE_BUILD_TESTS=ON \
+    -DCMAKE_BUILD_TYPE=Debug \
+    -DCMAKE_TOOLCHAIN_FILE=C:\tools\vcpkg\scripts\buildsystems\vcpkg.cmake .
+</code></pre></div><h3 id="mac-osx">
+  Mac OSX
+  <a class="anchor" href="#mac-osx">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd temporary-escape
+mkdir build
+CC<span style="color:#f92672">=</span>/usr/bin/clang CXX<span style="color:#f92672">=</span>/usr/bin/clang++ cmake <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -B ./build <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -G <span style="color:#e6db74">&#34;Ninja&#34;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -DTEMPORARY_ESCAPE_BUILD_TESTS<span style="color:#f92672">=</span>ON <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -DCMAKE_BUILD_TYPE<span style="color:#f92672">=</span>Debug <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -DCMAKE_TOOLCHAIN_FILE<span style="color:#f92672">=</span>/opt/vcpkg/scripts/buildsystems/vcpkg.cmake .
+</code></pre></div><h2 id="build">
+  Build
+  <a class="anchor" href="#build">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd temporary-escape
+cmake --build ./build --target TemporaryEscapeMain
+</code></pre></div><p>Binary file will be generated in <code>${CMAKE_BINARY_DIR}/src/TemporaryEscape</code>.</p>
+<h2 id="4-running">
+  4. Running
+  <a class="anchor" href="#4-running">#</a>
+</h2>
+<h3 id="linux-1">
+  Linux
+  <a class="anchor" href="#linux-1">#</a>
+</h3>
+<p>You need to provide <code>--root</code> because by default the executable <code>TemporaryEscape</code> expects that it is 1 folder down relative to where <code>assets</code> and <code>shaders</code> folders are located.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd temporary-escape
+./build/src/TemporaryEscape/TemporaryEscape --root <span style="color:#66d9ef">$(</span>pwd<span style="color:#66d9ef">)</span>
+</code></pre></div><h3 id="windows-1">
+  Windows
+  <a class="anchor" href="#windows-1">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat"><span style="color:#66d9ef">cd</span> temporary-escape
+.\build\src\TemporaryEscape\Debug\TemporaryEscape.exe --root $(pwd)
+</code></pre></div><h3 id="mac-osx-1">
+  Mac OSX
+  <a class="anchor" href="#mac-osx-1">#</a>
+</h3>
+<p>TBA</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+  <div><a class="flex align-center" href="https://github.com/matusnovak/temporary-escape/commit/f28caef0682d184f1e8eabf33f30d5e969c0f958" title='Last modified by Matus Novak | February 1, 2022' target="_blank" rel="noopener">
+      <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>February 1, 2022</span>
+    </a>
+  </div>
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/matusnovak/temporary-escape/edit/master/docs/content/docs/contributing/building.md" target="_blank" rel="noopener">
+      <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+
+</div>
+
+
+
+  <script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#building">Building</a>
+      <ul>
+        <li><a href="#1-prerequisites">1. Prerequisites</a></li>
+        <li><a href="#2-cloning">2. Cloning</a></li>
+        <li><a href="#3-configure-project">3. Configure project</a>
+          <ul>
+            <li><a href="#linux">Linux</a></li>
+            <li><a href="#windows">Windows</a></li>
+            <li><a href="#mac-osx">Mac OSX</a></li>
+          </ul>
+        </li>
+        <li><a href="#build">Build</a></li>
+        <li><a href="#4-running">4. Running</a>
+          <ul>
+            <li><a href="#linux-1">Linux</a></li>
+            <li><a href="#windows-1">Windows</a></li>
+            <li><a href="#mac-osx-1">Mac OSX</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
