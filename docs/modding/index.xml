@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Modding on Temporary Escape</title>
+    <link>https://temporary-escape.github.io/docs/modding/</link>
+    <description>Recent content in Modding on Temporary Escape</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://temporary-escape.github.io/docs/modding/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
