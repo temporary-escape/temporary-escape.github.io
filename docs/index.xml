@@ -12,14 +12,17 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://temporary-escape.github.io/docs/download/</guid>
-      <description>Download #  Latest Releases #  Version: v0.2.2 (May 06, 2023)
+      <description>Download #  Latest Releases #  Version: v0.2.3 (May 07, 2023)
 Windows Files:
-  Portable ZIP: TemporaryEscape-v0.2.2-Windows.zip
-  Installer: TemporaryEscape-v0.2.2-Windows.msi
+  Installer: TemporaryEscape-v0.2.3-Windows.msi
+  Portable ZIP: TemporaryEscape-v0.2.3-Windows.zip
   Linux Files:
-  AppImage: TemporaryEscape-v0.2.2-Linux.AppImage
-  TAR Archive: TemporaryEscape-v0.2.2-Linux.tar.gz
-  MacOS Files: System Requirements #  These are the minimum system requirements. You must have Vulkan 1.1 (or higher) compatible graphics card and a 64-bit operating system. The game may run on a lower hardware.</description>
+  TAR Archive: TemporaryEscape-v0.2.3-Linux.tar.gz
+  AppImage: TemporaryEscape-v0.2.3-Linux.AppImage
+  MacOS Files:
+  Apple Disk Image: TemporaryEscape-v0.2.3-Darwin.dmg
+  Portable ZIP: TemporaryEscape-v0.2.3-Darwin.zip
+   System Requirements #  These are the minimum system requirements. You must have Vulkan 1.1 (or higher) compatible graphics card and a 64-bit operating system.</description>
     </item>
     
     <item>
