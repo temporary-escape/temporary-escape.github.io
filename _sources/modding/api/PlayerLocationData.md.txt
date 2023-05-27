@@ -1,0 +1,15 @@
+# Class PlayerLocationData
+
+**Module:** `require("engine")`
+
+Database type that specifies the location of the player within the universe
+
+------------
+## Constructors
+
+List of constructors that will create an instance of `PlayerLocationData`.
+
+### new()
+
+Default constructor
+

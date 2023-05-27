@@ -1,0 +1,30 @@
+# Lua API
+
+## Classes
+
+| Class | Description |
+| ----- | ----------- |
+| [GalaxyData](GalaxyData) | Database type that represents basic galaxy information such us its name |
+| [RegionData](RegionData) | Database type that represents region data within a galaxy |
+| [FactionData](FactionData) | Database type that represents some faction |
+| [SystemData](SystemData) | Database type that represents some system within a galaxy that also belongs to a region |
+| [SectorData](SectorData) | Database type that represents some sector within a system |
+| [PlanetData](PlanetData) | Database type that represents some planet within a system |
+| [PlayerLocationData](PlayerLocationData) | Database type that specifies the location of the player within the universe |
+| [Database](Database) | Database class that can be used to access all of the data structures. |
+| [Server](Server) | A class that represents server operations |
+| [Vector2](Vector2) | A simple 2D vector class of float type |
+
+```{toctree}
+:hidden:
+GalaxyData
+RegionData
+FactionData
+SystemData
+SectorData
+PlanetData
+PlayerLocationData
+Database
+Server
+Vector2
+```

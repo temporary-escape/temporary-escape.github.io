@@ -1,0 +1,15 @@
+# Class FactionData
+
+**Module:** `require("engine")`
+
+Database type that represents some faction
+
+------------
+## Constructors
+
+List of constructors that will create an instance of `FactionData`.
+
+### new()
+
+Default constructor
+

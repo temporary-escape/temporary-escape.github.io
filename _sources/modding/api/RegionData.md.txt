@@ -1,0 +1,15 @@
+# Class RegionData
+
+**Module:** `require("engine")`
+
+Database type that represents region data within a galaxy
+
+------------
+## Constructors
+
+List of constructors that will create an instance of `RegionData`.
+
+### new()
+
+Default constructor
+

@@ -1,0 +1,37 @@
+# Class GalaxyData
+
+**Module:** `require("engine")`
+
+Database type that represents basic galaxy information such us its name
+
+------------
+## Constructors
+
+List of constructors that will create an instance of `GalaxyData`.
+
+### new()
+
+Default constructor
+
+------------
+## Fields
+
+List of fields within the table `GalaxyData`.
+These variables belong to this class and can be accessed only via an instance of this class.
+
+### id: string
+
+A unique UUID of the galaxy
+
+### pos: Vector2
+
+The position within the system
+
+### seed: integer
+
+A seed that is specific to this galaxy
+
+### name: string
+
+Name of the galaxy
+

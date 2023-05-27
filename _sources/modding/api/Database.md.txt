@@ -1,0 +1,6 @@
+# Class Database
+
+**Module:** `require("engine")`
+
+Database class that can be used to access all of the data structures.
+

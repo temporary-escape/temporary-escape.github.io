@@ -1,0 +1,56 @@
+# Class Vector2
+
+**Module:** `require("engine")`
+
+A simple 2D vector class of float type
+
+------------
+## Constructors
+
+List of constructors that will create an instance of `Vector2`.
+
+### new()
+
+Default constructor that initializes the vector to [0, 0]
+
+### new(x, y)
+
+Parametrized constructor that initializes the vector to [x, y]
+
+**Parameters:**
+
+* `x: number` - The x component
+* `y: number` - The y component
+
+------------
+## Member Functions
+
+List of **member** functions within the table `Vector2`.
+These functions need to be called using the colon symbol on some instance of `Vector2`.
+
+### distance(other)
+
+Calculates a distance to some other vector
+
+**Parameters:**
+
+* `other: Vector2` - The other vector to get distance to
+
+### rotate(angle)
+
+Returns a new vector that is rotated by some angle
+
+**Parameters:**
+
+* `angle: Angle` - in radians
+
+------------
+## Fields
+
+List of fields within the table `Vector2`.
+These variables belong to this class and can be accessed only via an instance of this class.
+
+### x: number
+
+### y: number
+

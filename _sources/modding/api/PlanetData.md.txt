@@ -1,0 +1,15 @@
+# Class PlanetData
+
+**Module:** `require("engine")`
+
+Database type that represents some planet within a system
+
+------------
+## Constructors
+
+List of constructors that will create an instance of `PlanetData`.
+
+### new()
+
+Default constructor
+

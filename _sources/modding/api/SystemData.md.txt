@@ -1,0 +1,15 @@
+# Class SystemData
+
+**Module:** `require("engine")`
+
+Database type that represents some system within a galaxy that also belongs to a region
+
+------------
+## Constructors
+
+List of constructors that will create an instance of `SystemData`.
+
+### new()
+
+Default constructor
+
