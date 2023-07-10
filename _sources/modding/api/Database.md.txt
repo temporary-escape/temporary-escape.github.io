@@ -4,3 +4,57 @@
 
 Database class that can be used to access all of the data structures.
 
+------------
+## Fields
+
+List of fields within the table `Database`.
+These variables belong to this class and can be accessed only via an instance of this class.
+
+### galaxies
+
+**Read-only!**
+
+**Type:** `Repository<GalaxyData>`
+
+### regions
+
+**Read-only!**
+
+**Type:** `Repository<RegionData>`
+
+### factions
+
+**Read-only!**
+
+**Type:** `Repository<FactionData>`
+
+### systems
+
+**Read-only!**
+
+**Type:** `Repository<SystemData>`
+
+### sectors
+
+**Read-only!**
+
+**Type:** `Repository<SectorData>`
+
+### planets
+
+**Read-only!**
+
+**Type:** `Repository<PlanetData>`
+
+### player_locations
+
+**Read-only!**
+
+**Type:** `Repository<PlayerLocationData>`
+
+### metadata
+
+**Read-only!**
+
+**Type:** `Repository<MetaData>`
+

@@ -4,6 +4,8 @@
 
 | Class | Description |
 | ----- | ----------- |
+| [Iterator<T>](Iterator_T_) | An iterator that is used by the seek() function from the Repository class. This iterator can be used to iterate through set of values, one at a time, by some prefix. |
+| [Repository<T>](Repository_T_) | Repository of some specific database type |
 | [GalaxyData](GalaxyData) | Database type that represents basic galaxy information such us its name |
 | [RegionData](RegionData) | Database type that represents region data within a galaxy |
 | [FactionData](FactionData) | Database type that represents some faction |
@@ -11,12 +13,15 @@
 | [SectorData](SectorData) | Database type that represents some sector within a system |
 | [PlanetData](PlanetData) | Database type that represents some planet within a system |
 | [PlayerLocationData](PlayerLocationData) | Database type that specifies the location of the player within the universe |
+| [StartingLocationData](StartingLocationData) | Database type that specifies the starting location for new players. |
 | [Database](Database) | Database class that can be used to access all of the data structures. |
 | [Server](Server) | A class that represents server operations |
 | [Vector2](Vector2) | A simple 2D vector class of float type |
 
 ```{toctree}
 :hidden:
+Iterator_T_
+Repository_T_
 GalaxyData
 RegionData
 FactionData
@@ -24,6 +29,7 @@ SystemData
 SectorData
 PlanetData
 PlayerLocationData
+StartingLocationData
 Database
 Server
 Vector2

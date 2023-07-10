@@ -1,0 +1,106 @@
+# Class Repository&lt;T&gt;
+
+**Module:** `require("engine")`
+
+Repository of some specific database type
+
+**Example:**
+
+```lua
+local engine = require("engine")
+local db = engine.get_database()
+
+local faction_terran = db.factions:find("faction_terran")
+if faction_terran == nil then
+    error("Faction was not found")
+else
+    print(string.format("Found faction: %s", faction_terran.name))
+end
+```
+
+------------
+## Member Functions
+
+List of **member** functions within the table `Repository<T>`.
+These functions need to be called using the colon symbol on some instance of `Repository<T>`.
+
+### find(key)
+
+Finds the value given some key
+
+**Parameters:**
+
+* key: `string` - The key of the value
+
+**Returns:** `T|nil` - The value or nil if not found
+
+### get(key)
+
+Similar to the find function but raises an error if the key is not found
+
+**Parameters:**
+
+* key: `string` - The key of the value
+
+**Returns:** `T` - The value under that specific key
+
+### put(key, value)
+
+Puts or overwrites a value with some key
+
+**Parameters:**
+
+* key: `string` - The key of the value
+* value: `T` - The value to store
+
+### multi_get(keys)
+
+Returns values as a list using a list of keys
+
+**Parameters:**
+
+* keys: `<string>[]` - A list of keys to retrieve
+
+**Returns:** `<T>[]` - A list (table) of results or an empty list
+
+### remove(key)
+
+Removes a key from the database
+
+**Parameters:**
+
+* key: `string` - The key to remove
+
+**Returns:** `bool` - True if removed or false otherwise
+
+### seek(prefix)
+
+Seeks a value by some prefix and an optional lower bound
+
+**Parameters:**
+
+* prefix: `string` - The prefix to seek through
+
+**Returns:** `Iterator<T>` - An instance of an iterator
+
+**See also:** [Iterator&lt;T&gt;](Iterator_T_)
+
+### remove_by_prefix(prefix)
+
+Removes all values by some prefix from the database
+
+**Parameters:**
+
+* prefix: `string` - The prefix of keys to remove
+
+### seek_all(prefix, max)
+
+Returns all values as a list by some prefix from the database
+
+**Parameters:**
+
+* prefix: `string` - The prefix of keys to retrieve
+* max: `integer|nil` - Maximum number of items to get (set to nil to get all results)
+
+**Returns:** `<T>[]` - A list (table) of results or an empty list
+

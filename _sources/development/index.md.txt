@@ -1,4 +1,4 @@
-# Modding
+# Development
 
 To be added...
 
@@ -6,6 +6,6 @@ To be added...
 :hidden:
 :maxdepth: 2
 
-api/index
-tutorial/index
+setup/index
+architecture/index
 ```

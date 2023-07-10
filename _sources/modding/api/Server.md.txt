@@ -16,7 +16,7 @@ Sets the function to be called when generating the universe.
 
 **Parameters:**
 
-* `fn: function` - A callback function that accepts a seed as a number
+* fn: `function` - A callback function that accepts a seed as a number
 
 ### start_sector(galaxy_id, system_id, sector_id)
 
@@ -24,9 +24,9 @@ Starts a sector. The function won't do anything if the server is already started
 
 **Parameters:**
 
-* `galaxy_id: string` - The galaxy ID
-* `system_id: string` - The system ID
-* `sector_id: string` - The sector ID
+* galaxy_id: `string` - The galaxy ID
+* system_id: `string` - The system ID
+* sector_id: `string` - The sector ID
 
 ### move_player_to_sector(server)
 
@@ -34,5 +34,5 @@ Starts a sector. The function won't do anything if the server is already started
 
 **Parameters:**
 
-* `server: engine.Server` - The other server
+* server: `engine.Server` - The other server
 

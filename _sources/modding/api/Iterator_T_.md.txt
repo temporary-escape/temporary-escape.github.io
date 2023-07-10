@@ -1,0 +1,46 @@
+# Class Iterator&lt;T&gt;
+
+**Module:** `require("engine")`
+
+An iterator that is used by the seek() function from the Repository class. This iterator can be used to iterate through set of values, one at a time, by some prefix.
+
+**See also:** [Repository&lt;T&gt;](Repository_T_)
+
+------------
+## Member Functions
+
+List of **member** functions within the table `Iterator<T>`.
+These functions need to be called using the colon symbol on some instance of `Iterator<T>`.
+
+### next()
+
+Retrieves the next value
+
+**Returns:** `bool` - True if there is some value to read or false if this is end of the seek
+
+```{warning}
+This function must be called first before trying to read the value or the key.
+```
+
+------------
+## Fields
+
+List of fields within the table `Iterator<T>`.
+These variables belong to this class and can be accessed only via an instance of this class.
+
+### value
+
+The current value that the iterator points to. You must first call next() before using this field, otherwise this raises an error.
+
+**Read-only!**
+
+**Type:** `T`
+
+### value
+
+The current key that the iterator points to. You must first call next() before using this field, otherwise this raises an error.
+
+**Read-only!**
+
+**Type:** `string`
+

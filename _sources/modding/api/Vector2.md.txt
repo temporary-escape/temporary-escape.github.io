@@ -19,8 +19,8 @@ Parametrized constructor that initializes the vector to [x, y]
 
 **Parameters:**
 
-* `x: number` - The x component
-* `y: number` - The y component
+* x: `number` - The x component
+* y: `number` - The y component
 
 ------------
 ## Member Functions
@@ -34,7 +34,9 @@ Calculates a distance to some other vector
 
 **Parameters:**
 
-* `other: Vector2` - The other vector to get distance to
+* other: `Vector2` - The other vector to get distance to
+
+**Returns:** `number` - The distance
 
 ### rotate(angle)
 
@@ -42,7 +44,19 @@ Returns a new vector that is rotated by some angle
 
 **Parameters:**
 
-* `angle: Angle` - in radians
+* angle: `number` - in radians
+
+**Returns:** `Vector2` - A new rotated vector
+
+**Example:**
+
+```lua
+local PI = 3.141592653589
+local a = engine.Vector2.new(1.0, 0.0)
+local b = a:rotate(PI)
+-- Prints: Rotated vector [1, 0] by 180 degrees is: [-1, -8.742278e-08]
+print(string.format("Rotated vector %s by 180 degrees is: %s", a, b))
+```
 
 ------------
 ## Fields
@@ -50,7 +64,11 @@ Returns a new vector that is rotated by some angle
 List of fields within the table `Vector2`.
 These variables belong to this class and can be accessed only via an instance of this class.
 
-### x: number
+### x
 
-### y: number
+**Type:** `number`
+
+### y
+
+**Type:** `number`
 

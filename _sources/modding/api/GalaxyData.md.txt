@@ -19,19 +19,27 @@ Default constructor
 List of fields within the table `GalaxyData`.
 These variables belong to this class and can be accessed only via an instance of this class.
 
-### id: string
+### id
 
 A unique UUID of the galaxy
 
-### pos: Vector2
+**Type:** `string`
+
+### pos
 
 The position within the system
 
-### seed: integer
+**Type:** `Vector2`
+
+### seed
 
 A seed that is specific to this galaxy
 
-### name: string
+**Type:** `integer`
+
+### name
 
 Name of the galaxy
+
+**Type:** `string`
 

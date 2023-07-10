@@ -1,0 +1,6 @@
+# Class StartingLocationData
+
+**Module:** `require("engine")`
+
+Database type that specifies the starting location for new players.
+
