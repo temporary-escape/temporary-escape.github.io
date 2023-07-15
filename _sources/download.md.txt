@@ -7,7 +7,7 @@ All releases are built automatically on GitHub from [here](https://github.com/te
 
 ## Choose Your Platform
 
-**Latest version v0.3.2 (July 15, 2023)**
+**Latest version v0.3.4 (July 15, 2023)**
 
 ``````{tab-set}
 `````{tab-item} Installer
@@ -15,7 +15,7 @@ All releases are built automatically on GitHub from [here](https://github.com/te
 ````{grid} 1 1 2 3
 ```{grid-item-card} Windows 64-bit
 :img-top: images/windows.png
-:link: https://temporary-escape.us-east-1.linodeobjects.com/release/v0.3.2/TemporaryEscape-v0.3.3-1-g3b3bbdf-Windows.msi
+:link: https://temporary-escape.us-east-1.linodeobjects.com/release/v0.3.4/TemporaryEscape-v0.3.4-Windows.msi
 :text-align: center
 
 MSI Installer (13.11 MB)
@@ -23,7 +23,7 @@ MSI Installer (13.11 MB)
 
 ```{grid-item-card} Linux 64-bit
 :img-top: images/linux.png
-:link: https://temporary-escape.us-east-1.linodeobjects.com/release/v0.3.2/TemporaryEscape-v0.3.3-1-g3b3bbdf-Linux.AppImage
+:link: https://temporary-escape.us-east-1.linodeobjects.com/release/v0.3.4/TemporaryEscape-v0.3.4-Linux.AppImage
 :text-align: center
 
 AppImage (18.27 MB)
@@ -31,7 +31,7 @@ AppImage (18.27 MB)
 
 ```{grid-item-card} Mac OS (Intel or ARM)
 :img-top: images/apple.png
-:link: https://temporary-escape.us-east-1.linodeobjects.com/release/v0.3.2/TemporaryEscape-v0.3.3-1-g3b3bbdf-Darwin.dmg
+:link: https://temporary-escape.us-east-1.linodeobjects.com/release/v0.3.4/TemporaryEscape-v0.3.4-Darwin.dmg
 :text-align: center
 
 Apple Disk Image (18.91 MB)
@@ -45,15 +45,15 @@ Apple Disk Image (18.91 MB)
 ````{grid} 1 1 2 3
 ```{grid-item-card} Windows 64-bit
 :img-top: images/windows.png
-:link: https://temporary-escape.us-east-1.linodeobjects.com/release/v0.3.2/TemporaryEscape-v0.3.3-1-g3b3bbdf-Windows.msi
+:link: https://temporary-escape.us-east-1.linodeobjects.com/release/v0.3.4/TemporaryEscape-v0.3.4-Windows.msi
 :text-align: center
 
-Portable ZIP (12.92 MB)
+Portable ZIP (12.91 MB)
 ```
 
 ```{grid-item-card} Linux 64-bit
 :img-top: images/linux.png
-:link: https://temporary-escape.us-east-1.linodeobjects.com/release/v0.3.2/TemporaryEscape-v0.3.3-1-g3b3bbdf-Linux.tar.gz
+:link: https://temporary-escape.us-east-1.linodeobjects.com/release/v0.3.4/TemporaryEscape-v0.3.4-Linux.tar.gz
 :text-align: center
 
 Portable TAR.GZ (17.92 MB)
@@ -61,7 +61,7 @@ Portable TAR.GZ (17.92 MB)
 
 ```{grid-item-card} Mac OS (Intel or ARM)
 :img-top: images/apple.png
-:link: https://temporary-escape.us-east-1.linodeobjects.com/release/v0.3.2/TemporaryEscape-v0.3.3-1-g3b3bbdf-Darwin.zip
+:link: https://temporary-escape.us-east-1.linodeobjects.com/release/v0.3.4/TemporaryEscape-v0.3.4-Darwin.zip
 :text-align: center
 
 Portable ZIP (18.99 MB)
