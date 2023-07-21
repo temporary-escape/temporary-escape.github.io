@@ -212,7 +212,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -315,7 +315,7 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
@@ -333,8 +333,21 @@ The game can run on all three platforms and you can develop the game on all of t
 </ul>
 <p><strong>You do not need to do this setup if you are interested only in modding the game with Lua or editing the
 asset files.</strong> See the <a class="reference internal" href="../../modding/tutorial/index.html"><span class="doc std std-doc">Modding Tutorial</span></a> for more information.</p>
+<section id="tl-dr">
+<h2>TL;DR<a class="headerlink" href="#tl-dr" title="Permalink to this heading">#</a></h2>
+<p>In short:</p>
+<ul class="simple">
+<li><p>Make sure that you have Clang version 14 or later, CMake, Ninja Build tool, pkg-config, and <code class="docutils literal notranslate"><span class="pre">xorg-dev</span></code> on Linux.</p></li>
+<li><p>On Windows use <strong>only</strong> Clang-CL provided by the Visual Studio Build Tools. Anything else will fail.</p></li>
+<li><p>Prefer to use the provided CMake preset named <code class="docutils literal notranslate"><span class="pre">ninja-macos</span></code>, <code class="docutils literal notranslate"><span class="pre">ninja-linux</span></code>, or <code class="docutils literal notranslate"><span class="pre">ninja-msvc</span></code>.</p></li>
+<li><p>You don’t need to install Vulkan SDK.</p></li>
+<li><p>You don’t need to install vcpkg into your system.</p></li>
+<li><p>You don’t need any additional C++ dependencies. Everything is handled by the CMake, and by the vcpkg that is a git
+submodule within the source code.</p></li>
+</ul>
 <div class="toctree-wrapper compound">
 </div>
+</section>
 </section>
 
         </article>
@@ -387,8 +400,27 @@ asset files.</strong> See the <a class="reference internal" href="../../modding/
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Setup</a><ul>
+<li><a class="reference internal" href="#tl-dr">TL;DR</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>
