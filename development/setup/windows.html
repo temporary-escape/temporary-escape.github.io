@@ -330,6 +330,7 @@
 <li><p>The game is compiled for x64 architecture only.</p></li>
 <li><p><strong>Visual Studio Tools</strong> are needed with the <strong>Clang compiler</strong>.</p></li>
 <li><p>MinGW, MSys, or Cygwin are <strong>not supported</strong>.</p></li>
+<li><p>It is recommended to use Visual Studio 2022</p></li>
 </ul>
 </section>
 <section id="install-dependencies">
@@ -399,7 +400,7 @@ locally within the build folder only.</p>
 <p>Debug builds are useful for debugging, <strong>but it makes the game slow</strong>. This is especially noticable when
 generating a new universe. It may take up to 10x longer. Prefer to use <code class="docutils literal notranslate"><span class="pre">Release</span></code> unless you need debugging support.</p>
 </div>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>cmake<span class="w"> </span>--preset<span class="w"> </span>ninja-msvc<span class="w"> </span>-DCMAKE_INSTALL_PREFIX<span class="o">=</span>./install
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>cmake<span class="w"> </span>--preset<span class="w"> </span>ninja-msvc<span class="w"> </span>-DCMAKE_BUILD_TYPE<span class="o">=</span>Debug<span class="w"> </span>-DCMAKE_INSTALL_PREFIX<span class="o">=</span>./install
 </pre></div>
 </div>
 <p>At the end you should see something as “Build files have been written to: bla bla bla”.</p>
@@ -416,24 +417,123 @@ the game will compile shader code and will compress the textures from png format
 <strong>This may take several minutes.</strong> This is done only once.</p>
 </div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run the game with --root argument pointing to the cloned repository!</span>
-./build/TemporaryEscape<span class="w"> </span>--root<span class="w"> </span>C:<span class="se">\P</span>rojects<span class="se">\t</span>emporary-escape
+.<span class="se">\b</span>uild<span class="se">\T</span>emporaryEscape.exe<span class="w"> </span>--root<span class="w"> </span>C:<span class="se">\P</span>rojects<span class="se">\t</span>emporary-escape
+</pre></div>
+</div>
+<p>The logs for the game can be found in the following path as listed below.
+<strong>The logs will not appear in the terminal output.</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>C:\Users\Username\AppData\Roaming\TemporaryEscape\TemporaryEscape.log
 </pre></div>
 </div>
 </section>
 <section id="option-b-visual-studio-code">
 <h2>3. Option B: Visual Studio Code<a class="headerlink" href="#option-b-visual-studio-code" title="Permalink to this heading">#</a></h2>
-<p>First, you will need to clone the source code and fetch the git submodules.</p>
+<p>Install <a class="reference external" href="https://code.visualstudio.com/">Visual Studio Code</a> and make sure you have the latest updated version.</p>
+<p>Once installed, make sure to install the CMake Tools extension by looking for “cmake” and installing the
+“CMake Tools” by Microsoft.</p>
+<p><img alt="" src="../../_images/windows-vscode-extension.png" /></p>
+<p>You will also need to install “C++” extension by Microsoft.</p>
+<p><img alt="" src="../../_images/windows-vscode-extension2.png" /></p>
+<p>Next, open the terminal and clone the game source code somewhere into your system.</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/temporary-escape/temporary-escape.git
 
 <span class="nb">cd</span><span class="w"> </span>./temporary-escape
 
 git<span class="w"> </span>submodule<span class="w"> </span>update<span class="w"> </span>--init
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>You must run <code class="docutils literal notranslate"><span class="pre">vcvars64.bat</span></code> from a command line, then start Visual Studio Code by executing command <code class="docutils literal notranslate"><span class="pre">code</span></code>.
+This will make sure that the correct compiler is set! Otherwise the configuration will fail.</p>
+</div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># MUST BE DONE VIA CMD!!!</span>
+<span class="c1"># The script can also be located at (&quot;Community&quot; sub-folder):</span>
+<span class="c1"># C:\Program Files (x86)\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvars64.bat</span>
+call<span class="w"> </span><span class="s2">&quot;C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Auxiliary\Build\vcvars64.bat&quot;</span>
+
+<span class="c1"># Starts a new window of Visual Studio Code with vcvars64 variables set!</span>
+code
+</pre></div>
+</div>
+<p><img alt="" src="../../_images/windows-vscode-vcvars.png" /></p>
+<p>Next, <strong>open that cloned repository folder</strong> with Visual Studio Code, and make sure to select “Trust” when asked to.</p>
+<p><img alt="" src="../../_images/windows-vscode-trust.png" /></p>
+<p>Next, open the command panel (press keys [Ctrl] + [P]) and type “&gt; cmake configure”, select the “CMake: Configure”
+option.</p>
+<p><img alt="" src="../../_images/windows-vscode-configure.png" /></p>
+<p>When asked about the preset, select the “Ninja Clang” one.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This will download all of the C++ dependencies, compile them, and configure the game’s source code.
+<strong>This may take up to 1 hour to complete and may take up to 3GB of disk space.</strong> The dependencies are installed
+locally within the build folder only.</p>
+</div>
+<p><img alt="" src="../../_images/windows-vscode-toolchain.png" /></p>
+<p>When asked about the test preset, select the “ninja-linux” one.</p>
+<p><img alt="" src="../../_images/windows-vscode-testpreset.png" /></p>
+<p>At the end you should see something like this with “Build files have been written to: …”.</p>
+<p><img alt="" src="../../_images/windows-vscode-configured.png" /></p>
+<p>Next, open the command panel (press keys [Ctrl] + [P]) and type “&gt; cmake build”, select the “CMake: Build”
+option.</p>
+<p><img alt="" src="../../_images/windows-vscode-build.png" /></p>
+<p>When asked which target, select the <code class="docutils literal notranslate"><span class="pre">TemporaryEscapeMain</span></code> target.</p>
+<p><img alt="" src="../../_images/windows-vscode-target.png" /></p>
+<p>Once built, you should see something like this:</p>
+<p><img alt="" src="../../_images/windows-vscode-builddone.png" /></p>
+<p>To launch the game with debugger through Visual Studio, you must create a new launch configuration <code class="docutils literal notranslate"><span class="pre">launch.json</span></code>
+in the <code class="docutils literal notranslate"><span class="pre">.vscode</span></code> folder. If the folder does not exist, create it. Use the following contents below for the
+<code class="docutils literal notranslate"><span class="pre">launch.json</span></code> file:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0.2.0&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;configurations&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cppvsdbg&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;cwd&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;${workspaceFolder}/build&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;request&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;launch&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Debug TemporaryEscape&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;program&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;${workspaceFolder}/build/TemporaryEscape.exe&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;args&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">&quot;--root&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;${workspaceFolder}&quot;</span>
+<span class="w">      </span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Once the <code class="docutils literal notranslate"><span class="pre">launch.json</span></code> is created, go to the “Run and Debug” panel by clicking the play button from the side menu.
+Select “Debug TemporaryEscape” and click the play icon button.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>When running the game in a singleplayer or multiplayer mode <strong>for the first time from the source code</strong>,
+the game will compile shader code and will compress the textures from png format into ktx2 format.
+<strong>This may take several minutes.</strong> This is done only once.</p>
+</div>
+<p><img alt="" src="../../_images/windows-vscode-debugging.png" /></p>
+<p>The logs for the game can be found in the following path as listed below.
+<strong>The logs will not appear in the terminal output.</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>C:\Users\Username\AppData\Roaming\TemporaryEscape\TemporaryEscape.log
+</pre></div>
+</div>
+<p>To run the game from command line, you must do it as the following:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run the game with --root argument pointing to the cloned repository!</span>
+./build/TemporaryEscape.exe<span class="w"> </span>--root<span class="w"> </span>C:/Projects/temporary-escape
 </pre></div>
 </div>
 </section>
 <section id="option-c-visual-studio-ide-2022">
 <h2>3. Option C: Visual Studio IDE 2022<a class="headerlink" href="#option-c-visual-studio-ide-2022" title="Permalink to this heading">#</a></h2>
-<p>First, you will need to clone the source code and fetch the git submodules.</p>
+<p>You will need to install Visual Studio 2022 or later. To do so, open the start menu, and search
+for <code class="docutils literal notranslate"><span class="pre">visual</span> <span class="pre">studio</span> <span class="pre">installer</span></code>.
+This has been installed with the Build Tools that you have installed previously (see the “Dependencies” section above).</p>
+<p><img alt="" src="../../_images/windows-vs-find.png" /></p>
+<p>Select the “Available” tab at the top and install the Community version of Visual Studio.</p>
+<p><img alt="" src="../../_images/windows-vs-install.png" /></p>
+<p>When selecting the components, make sure to select “Desktop development with C++”. You must also select “C++ Clang tools
+for Windows” from the right hand side menu “Installation details”.</p>
+<p><img alt="" src="../../_images/windows-vs-install2.png" /></p>
+<p>Next, you will need to clone the source code and fetch the git submodules.</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/temporary-escape/temporary-escape.git
 
 <span class="nb">cd</span><span class="w"> </span>./temporary-escape
@@ -441,15 +541,124 @@ git<span class="w"> </span>submodule<span class="w"> </span>update<span class="w
 git<span class="w"> </span>submodule<span class="w"> </span>update<span class="w"> </span>--init
 </pre></div>
 </div>
+<p>Next, open the cloned folder. Visual Studio should automatically choose the provided CMake profile and it should
+start configuring the project.</p>
+<p><img alt="" src="../../_images/windows-vs-open.png" /></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This will download all of the C++ dependencies, compile them, and configure the game’s source code.
+<strong>This may take up to 1 hour to complete and may take up to 3GB of disk space.</strong> The dependencies are installed
+locally within the build folder only.</p>
+</div>
+<p>Once configured, you should see a message “Build files have been written to: bla bla bla”.</p>
+<p><img alt="" src="../../_images/windows-vs-configured.png" /></p>
+<p>To build the game, select the <code class="docutils literal notranslate"><span class="pre">TemporaryEscape.exe</span></code> Startup Item from the dropdown in the top menu bar.</p>
+<p><img alt="" src="../../_images/windows-vs-target.png" /></p>
+<p>Next, in the top menu bar, click on “Build” and then select “Build TemporaryEscape.exe”.</p>
+<p><img alt="" src="../../_images/windows-vs-build.png" /></p>
+<p>Once built, you should see a message as shown below.</p>
+<p><img alt="" src="../../_images/windows-vs-builddone.png" /></p>
+<p>To play the game, in the top menu bar, click “Debug” and then select “Debug and Launch Settings for
+TemporaryEscapeMain”.</p>
+<p><img alt="" src="../../_images/windows-vs-launchsettings.png" /></p>
+<p>This will create a new <code class="docutils literal notranslate"><span class="pre">launch.vs.json</span></code> file. Add in the following contents after <code class="docutils literal notranslate"><span class="pre">&quot;name&quot;:</span></code> property.
+Set the correct path. This path must point to the root project folder. <strong>Don’t forget to save the file.</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>  &quot;args&quot;: [
+    &quot;--root&quot;,
+    &quot;C:/projects/temporary-escape&quot;
+  ]
+</pre></div>
+</div>
+<p><img alt="" src="../../_images/windows-vs-launchjson.png" /></p>
+<p>And finally press the play button in the top menu bar.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>When running the game in a singleplayer or multiplayer mode <strong>for the first time from the source code</strong>,
+the game will compile shader code and will compress the textures from png format into ktx2 format.
+<strong>This may take several minutes.</strong> This is done only once.</p>
+</div>
+<p><img alt="" src="../../_images/windows-vs-play.png" /></p>
+<p>The logs for the game can be found in the following path as listed below.
+<strong>The logs will not appear in the terminal output.</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>C:\Users\Username\AppData\Roaming\TemporaryEscape\TemporaryEscape.log
+</pre></div>
+</div>
+<p>To run the game from command line, you must do it as the following:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run the game with --root argument pointing to the cloned repository!</span>
+./build/TemporaryEscape.exe<span class="w"> </span>--root<span class="w"> </span>C:/Projects/temporary-escape
+</pre></div>
+</div>
 </section>
-<section id="option-d-clion">
-<h2>3. Option D: CLion<a class="headerlink" href="#option-d-clion" title="Permalink to this heading">#</a></h2>
-<p>First, you will need to clone the source code and fetch the git submodules.</p>
+<section id="option-d-jetbrains-clion">
+<h2>3. Option D: jetBrains CLion<a class="headerlink" href="#option-d-jetbrains-clion" title="Permalink to this heading">#</a></h2>
+<p>First, download and install <a class="reference external" href="https://www.jetbrains.com/clion/download/">CLion from the official JetBrains website</a>.</p>
+<p>Next, you will need to clone the source code and fetch the git submodules.</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/temporary-escape/temporary-escape.git
 
 <span class="nb">cd</span><span class="w"> </span>./temporary-escape
 
 git<span class="w"> </span>submodule<span class="w"> </span>update<span class="w"> </span>--init
+</pre></div>
+</div>
+<p>Next, open CLion and open the cloned repository as a folder.</p>
+<p><img alt="" src="../../_images/windows-clion-open.png" /></p>
+<p>When asked about trusting the project, click “Trust Project”.</p>
+<p><img alt="" src="../../_images/windows-clion-trust.png" /></p>
+<p>Once the project is open, you should see “Open Project Wizard” window. Select the “Visual Studio” toolchain.
+Choose the <code class="docutils literal notranslate"><span class="pre">amd64</span></code> (nor ARM!) architecture. You will have to explicitly set the compiler to <code class="docutils literal notranslate"><span class="pre">clang-cl.exe</span></code> that
+is located in a <code class="docutils literal notranslate"><span class="pre">x64</span></code> folder. The location should be the following (but may be different!):</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/Llvm/x64/bin/clang-cl.exe
+</pre></div>
+</div>
+<p>Do this for both the C and the C++ compiler.</p>
+<p><img alt="" src="../../_images/windows-clion-toolchain.png" /></p>
+<p>On the next page, select the Visual Studio toolchain and choose <code class="docutils literal notranslate"><span class="pre">Ninja</span></code> for the “Generator”.
+In the “CMake options” add in the following option:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>-DCMAKE_INSTALL_PREFIX=./install
+</pre></div>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Debug builds are useful for debugging, <strong>but it makes the game slow</strong>. This is especially noticable when
+generating a new universe. It may take up to 10x longer. Prefer to use <code class="docutils literal notranslate"><span class="pre">Release</span></code> unless you need debugging support.</p>
+</div>
+<p><img alt="" src="../../_images/windows-clion-configure.png" /></p>
+<p>And finally click Finish.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This will download all of the C++ dependencies, compile them, and configure the game’s source code.
+<strong>This may take up to 1 hour to complete and may take up to 3GB of disk space.</strong> The dependencies are installed
+locally within the build folder only.</p>
+</div>
+<p>Once configured, you should see something as “Build files have been written to: bla bla bla” in the “CMake” tab at
+the bottom.</p>
+<p><img alt="" src="../../_images/windows-clion-configured.png" /></p>
+<p>To build the game select the “TemporaryEscapeMain” from the dropdown in the top menu bar, and click the build icon next
+to it.</p>
+<p><img alt="" src="../../_images/windows-clion-build.png" /></p>
+<p>Once built you should see something as the following:</p>
+<p><img alt="" src="../../_images/windows-clion-builddone.png" /></p>
+<p>To play and debug the game, you must first edit the configuration for the “TemporaryEscapeMain” target. Click the
+down icon in the dropdown in the top menu bar, and select “Edit Configurations” from the dropdown.</p>
+<p><img alt="" src="../../_images/windows-clion-editrun.png" /></p>
+<p>You must add a program argument <code class="docutils literal notranslate"><span class="pre">--root</span></code> followed by a space followed by the exact path to the source code of the game.</p>
+<p><img alt="" src="../../_images/windows-clion-editargs.png" /></p>
+<p>And finally click play button (left icon). To run with a debugger click the second button (right icon).</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>When running the game in a singleplayer or multiplayer mode <strong>for the first time from the source code</strong>,
+the game will compile shader code and will compress the textures from png format into ktx2 format.
+<strong>This may take several minutes.</strong> This is done only once.</p>
+</div>
+<p><img alt="" src="../../_images/windows-clion-play.png" /></p>
+<p>The logs for the game can be found in the following path as listed below.
+<strong>The logs will not appear in the terminal output.</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>C:\Users\Username\AppData\Roaming\TemporaryEscape\TemporaryEscape.log
+</pre></div>
+</div>
+<p>To run the game from command line, you must do it as the following:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run the game with --root argument pointing to the cloned repository!</span>
+./build/TemporaryEscape.exe<span class="w"> </span>--root<span class="w"> </span>C:/Projects/temporary-escape
 </pre></div>
 </div>
 </section>
@@ -459,16 +668,68 @@ git<span class="w"> </span>submodule<span class="w"> </span>update<span class="w
 Make sure that you have used <code class="docutils literal notranslate"><span class="pre">-DCMAKE_INSTALL_PREFIX=/some/path</span></code> during the configuration. If you are using
 a CMake preset (via <code class="docutils literal notranslate"><span class="pre">--preset</span></code>) then the install folder is going to be a directory named <code class="docutils literal notranslate"><span class="pre">install</span></code> inside the
 project folder. It will be created during the install command as shown below.</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># If you are using CLion the folder is most likely &quot;cmake-build-debug&quot; or &quot;cmake-build-release&quot;</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># If you are using CLion the folder is most likely &quot;cmake-build-debug-visual-studio&quot; </span>
+<span class="c1"># or &quot;cmake-build-release-visual-studio&quot;</span>
 cmake<span class="w"> </span>--build<span class="w"> </span>./build<span class="w"> </span>--target<span class="w"> </span>install
 </pre></div>
 </div>
 </section>
 <section id="creating-an-exe-installer-or-a-zip-package-optional">
 <h2>5. Creating an exe installer or a zip package (optional)<a class="headerlink" href="#creating-an-exe-installer-or-a-zip-package-optional" title="Permalink to this heading">#</a></h2>
+<p>To create an installer<code class="docutils literal notranslate"><span class="pre">.exe</span></code> and <code class="docutils literal notranslate"><span class="pre">.zip</span></code> package, open a command line, go to the project folder, and type the following
+command below.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># If you are using CLion the folder is most likely &quot;cmake-build-debug-visual-studio&quot; </span>
+<span class="c1"># or &quot;cmake-build-release-visual-studio&quot;</span>
+cmake<span class="w"> </span>--build<span class="w"> </span>./build<span class="w"> </span>--target<span class="w"> </span>package
+</pre></div>
+</div>
 </section>
 <section id="vulkan-validation-layers-optional">
 <h2>6. Vulkan validation layers (optional)<a class="headerlink" href="#vulkan-validation-layers-optional" title="Permalink to this heading">#</a></h2>
+<p>The validation layers are useful for debugging Vulkan issues. This is enabled at runtime and does not need re-compiling.
+To use the validation layers you must first download and install Vulkan SDK into your system.</p>
+<p>Download Vulkan SDK version <code class="docutils literal notranslate"><span class="pre">1.3.239.0</span></code> from
+the <a class="reference external" href="https://vulkan.lunarg.com/sdk/home#windows">Vulkan SDK official download page</a>.
+Or you can use
+an <a class="reference external" href="https://temporary-escape.us-east-1.linodeobjects.com/vulkan-sdk/VulkanSDK-1.3.239.0-Installer.exe">unofficial mirror link here</a>.</p>
+<p>You will also need to install the “VulkanRT” from the official download page. Or you can use
+an <a class="reference external" href="https://temporary-escape.us-east-1.linodeobjects.com/vulkan-sdk/VulkanRT-1.3.239.0-Installer.exe">unofficial mirror link here</a>.</p>
+<p>Install the SDK into your Windows, for example into the <code class="docutils literal notranslate"><span class="pre">C:\VulkanSDK\1.3.239.0</span></code> folder.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span><span class="w"> </span><span class="nv">VK_LAYER_PATH</span><span class="o">=</span>C:<span class="se">\V</span>ulkanSDK<span class="se">\1</span>.3.239.0<span class="se">\B</span>in
+<span class="nb">set</span><span class="w"> </span><span class="nv">VK_INSTANCE_LAYERS</span><span class="o">=</span>VK_LAYER_KHRONOS_validation
+
+<span class="c1"># Then start the game</span>
+.<span class="se">\b</span>uild<span class="se">\T</span>emporaryEscape.exe<span class="w"> </span>--root<span class="w"> </span>C:/Projects/temporary-escape
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The game will pick up the <code class="docutils literal notranslate"><span class="pre">VK_LAYER_PATH</span></code> and will enable the validation layers when the game starts.
+The game will stop and exit immediately if the validation layers can not be setup. This may
+happen if your Vulkan SDK folder is wrong or the environment variables are wrong. Look into
+the log file in your <code class="docutils literal notranslate"><span class="pre">~/.temporary-escape/</span></code> folder.</p>
+</div>
+<p>If you are using JetBrains CLion, you can modify the “Run Configuration” for the “TemporaryEscapeMain” target
+(the dropdown in the top menu bar). Add these environment variables as shown below.</p>
+<p><img alt="" src="../../_images/windows-clion-layers.png" /></p>
+<p>If you are using Visual Studio Code, you can modify the <code class="docutils literal notranslate"><span class="pre">launch.json</span></code> file in the <code class="docutils literal notranslate"><span class="pre">.vscode</span></code> folder. Simply
+add those variables into <code class="docutils literal notranslate"><span class="pre">&quot;environment&quot;:</span> <span class="pre">[]</span></code> property as shown below.</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0.2.0&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;configurations&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cppdbg&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Debug TemporaryEscape&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;environment&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">&quot;VK_LAYER_PATH=C:\\VulkanSDK\\1.3.239.0\\Bin&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;VK_INSTANCE_LAYERS=VK_LAYER_KHRONOS_validation&quot;</span>
+<span class="w">      </span><span class="p">]</span>
+<span class="w">      </span><span class="c1">// Other stuff here</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 </section>
 </section>
 
@@ -540,7 +801,7 @@ cmake<span class="w"> </span>--build<span class="w"> </span>./build<span class="
 <li><a class="reference internal" href="#option-a-command-line-only">3. Option A: Command line only</a></li>
 <li><a class="reference internal" href="#option-b-visual-studio-code">3. Option B: Visual Studio Code</a></li>
 <li><a class="reference internal" href="#option-c-visual-studio-ide-2022">3. Option C: Visual Studio IDE 2022</a></li>
-<li><a class="reference internal" href="#option-d-clion">3. Option D: CLion</a></li>
+<li><a class="reference internal" href="#option-d-jetbrains-clion">3. Option D: jetBrains CLion</a></li>
 <li><a class="reference internal" href="#installing-the-game-optional">4. Installing the game (optional)</a></li>
 <li><a class="reference internal" href="#creating-an-exe-installer-or-a-zip-package-optional">5. Creating an exe installer or a zip package (optional)</a></li>
 <li><a class="reference internal" href="#vulkan-validation-layers-optional">6. Vulkan validation layers (optional)</a></li>

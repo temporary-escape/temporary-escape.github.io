@@ -331,6 +331,7 @@
 have <a class="reference external" href="https://support.apple.com/en-us/HT211861">Rosetta installed</a> if you have M1 Mac!</p></li>
 <li><p><a class="reference external" href="https://brew.sh/">Homebrew</a> to install dependencies.</p></li>
 <li><p>XCode is not needed.</p></li>
+<li><p>It is recommended to use JetBrains CLion</p></li>
 </ul>
 </section>
 <section id="install-dependencies">
@@ -376,7 +377,8 @@ generating a new universe. It may take up to 10x longer. Prefer to use <code cla
 </div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># This may take up to 1 hour to complete!</span>
 cmake<span class="w"> </span>--preset<span class="w"> </span>ninja-macos<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-DCMAKE_BUILD_TYPE<span class="o">=</span>Debug
+<span class="w">  </span>-DCMAKE_BUILD_TYPE<span class="o">=</span>Debug<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-DCMAKE_INSTALL_PREFIX<span class="o">=</span>./install
 </pre></div>
 </div>
 <p>At the end you should see something as “Build files have been written to: bla bla bla”.</p>
