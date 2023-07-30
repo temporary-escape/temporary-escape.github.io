@@ -45,7 +45,7 @@ Apple Disk Image (18.91 MB)
 ````{grid} 1 1 2 3
 ```{grid-item-card} Windows 64-bit
 :img-top: images/windows.png
-:link: https://temporary-escape.us-east-1.linodeobjects.com/release/v0.3.5/TemporaryEscape-v0.3.5-Windows.msi
+:link: https://temporary-escape.us-east-1.linodeobjects.com/release/v0.3.5/TemporaryEscape-v0.3.5-Windows.zip
 :text-align: center
 
 Portable ZIP (12.91 MB)
