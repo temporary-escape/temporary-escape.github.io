@@ -10,29 +10,20 @@ A class that represents server operations
 List of **member** functions within the table `Server`.
 These functions need to be called using the colon symbol on some instance of `Server`.
 
-### set_generator(fn)
+### move_player_to_sector(player_id)
 
-Sets the function to be called when generating the universe.
-
-**Parameters:**
-
-* fn: `function` - A callback function that accepts a seed as a number
-
-### start_sector(galaxy_id, system_id, sector_id)
-
-Starts a sector. The function won't do anything if the server is already started.
+Moves a player to sector and starts the sector if it is not running
 
 **Parameters:**
 
-* galaxy_id: `string` - The galaxy ID
-* system_id: `string` - The system ID
-* sector_id: `string` - The sector ID
+* player_id: `The` - ID of the player to move
 
-### move_player_to_sector(server)
+### add_sector_type(name, type)
 
-Starts a sector. The function won't do anything if the server is already started.
+Adds a new sector type, or overwrites an existing sector type, for the galaxy generator.
 
 **Parameters:**
 
-* server: `engine.Server` - The other server
+* name: `Name` - of the sector type
+* type: `An` - instance of SectorType
 

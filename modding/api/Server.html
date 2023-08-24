@@ -1,13 +1,13 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="en" data-content_root="../../">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Class Vector2" href="Vector2.html" /><link rel="prev" title="Class Database" href="Database.html" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Class Spawner" href="Spawner.html" /><link rel="prev" title="Class Vector2" href="Vector2.html" />
 
-    <!-- Generated with Sphinx 7.1.1 and Furo 2023.07.26 -->
+    <!-- Generated with Sphinx 7.2.3 and Furo 2023.08.19 -->
         <title>Class Server - Temporary Escape documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b76e3c8a" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=135e06be" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?v=36a5483c" />
@@ -247,6 +247,11 @@
 </li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">Modding</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Modding</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l2 current has-children"><a class="reference internal" href="index.html">Lua API</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of Lua API</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="Vector2.html">Class Vector2</a></li>
+<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">Class Server</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Spawner.html">Class Spawner</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SectorType.html">Class SectorType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SectorCondition.html">Class SectorCondition</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Iterator_T_.html">Class Iterator&lt;T&gt;</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Repository_T_.html">Class Repository&lt;T&gt;</a></li>
 <li class="toctree-l3"><a class="reference internal" href="GalaxyData.html">Class GalaxyData</a></li>
@@ -258,8 +263,6 @@
 <li class="toctree-l3"><a class="reference internal" href="PlayerLocationData.html">Class PlayerLocationData</a></li>
 <li class="toctree-l3"><a class="reference internal" href="StartingLocationData.html">Class StartingLocationData</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Database.html">Class Database</a></li>
-<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">Class Server</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Vector2.html">Class Vector2</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../tutorial/index.html">Tutorial</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of Tutorial</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="simple">
@@ -322,38 +325,29 @@
         </div>
         <article role="main">
           <section id="class-server">
-<h1>Class Server<a class="headerlink" href="#class-server" title="Permalink to this heading">#</a></h1>
+<h1>Class Server<a class="headerlink" href="#class-server" title="Link to this heading">#</a></h1>
 <p><strong>Module:</strong> <code class="docutils literal notranslate"><span class="pre">require(&quot;engine&quot;)</span></code></p>
 <p>A class that represents server operations</p>
 <hr class="docutils" />
 <section id="member-functions">
-<h2>Member Functions<a class="headerlink" href="#member-functions" title="Permalink to this heading">#</a></h2>
+<h2>Member Functions<a class="headerlink" href="#member-functions" title="Link to this heading">#</a></h2>
 <p>List of <strong>member</strong> functions within the table <code class="docutils literal notranslate"><span class="pre">Server</span></code>.
 These functions need to be called using the colon symbol on some instance of <code class="docutils literal notranslate"><span class="pre">Server</span></code>.</p>
-<section id="set-generator-fn">
-<h3>set_generator(fn)<a class="headerlink" href="#set-generator-fn" title="Permalink to this heading">#</a></h3>
-<p>Sets the function to be called when generating the universe.</p>
+<section id="move-player-to-sector-player-id">
+<h3>move_player_to_sector(player_id)<a class="headerlink" href="#move-player-to-sector-player-id" title="Link to this heading">#</a></h3>
+<p>Moves a player to sector and starts the sector if it is not running</p>
 <p><strong>Parameters:</strong></p>
 <ul class="simple">
-<li><p>fn: <code class="docutils literal notranslate"><span class="pre">function</span></code> - A callback function that accepts a seed as a number</p></li>
+<li><p>player_id: <code class="docutils literal notranslate"><span class="pre">The</span></code> - ID of the player to move</p></li>
 </ul>
 </section>
-<section id="start-sector-galaxy-id-system-id-sector-id">
-<h3>start_sector(galaxy_id, system_id, sector_id)<a class="headerlink" href="#start-sector-galaxy-id-system-id-sector-id" title="Permalink to this heading">#</a></h3>
-<p>Starts a sector. The function won’t do anything if the server is already started.</p>
+<section id="add-sector-type-name-type">
+<h3>add_sector_type(name, type)<a class="headerlink" href="#add-sector-type-name-type" title="Link to this heading">#</a></h3>
+<p>Adds a new sector type, or overwrites an existing sector type, for the galaxy generator.</p>
 <p><strong>Parameters:</strong></p>
 <ul class="simple">
-<li><p>galaxy_id: <code class="docutils literal notranslate"><span class="pre">string</span></code> - The galaxy ID</p></li>
-<li><p>system_id: <code class="docutils literal notranslate"><span class="pre">string</span></code> - The system ID</p></li>
-<li><p>sector_id: <code class="docutils literal notranslate"><span class="pre">string</span></code> - The sector ID</p></li>
-</ul>
-</section>
-<section id="move-player-to-sector-server">
-<h3>move_player_to_sector(server)<a class="headerlink" href="#move-player-to-sector-server" title="Permalink to this heading">#</a></h3>
-<p>Starts a sector. The function won’t do anything if the server is already started.</p>
-<p><strong>Parameters:</strong></p>
-<ul class="simple">
-<li><p>server: <code class="docutils literal notranslate"><span class="pre">engine.Server</span></code> - The other server</p></li>
+<li><p>name: <code class="docutils literal notranslate"><span class="pre">Name</span></code> - of the sector type</p></li>
+<li><p>type: <code class="docutils literal notranslate"><span class="pre">An</span></code> - instance of SectorType</p></li>
 </ul>
 </section>
 </section>
@@ -364,23 +358,23 @@ These functions need to be called using the colon symbol on some instance of <co
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="Vector2.html">
+          <a class="next-page" href="Spawner.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Class Vector2</div>
+                <div class="title">Class Spawner</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="Database.html">
+          <a class="prev-page" href="Vector2.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Class Database</div>
+                <div class="title">Class Vector2</div>
                 
               </div>
             </a>
@@ -423,9 +417,8 @@ These functions need to be called using the colon symbol on some instance of <co
             <ul>
 <li><a class="reference internal" href="#">Class Server</a><ul>
 <li><a class="reference internal" href="#member-functions">Member Functions</a><ul>
-<li><a class="reference internal" href="#set-generator-fn">set_generator(fn)</a></li>
-<li><a class="reference internal" href="#start-sector-galaxy-id-system-id-sector-id">start_sector(galaxy_id, system_id, sector_id)</a></li>
-<li><a class="reference internal" href="#move-player-to-sector-server">move_player_to_sector(server)</a></li>
+<li><a class="reference internal" href="#move-player-to-sector-player-id">move_player_to_sector(player_id)</a></li>
+<li><a class="reference internal" href="#add-sector-type-name-type">add_sector_type(name, type)</a></li>
 </ul>
 </li>
 </ul>
@@ -439,9 +432,9 @@ These functions need to be called using the colon symbol on some instance of <co
       
     </aside>
   </div>
-</div><script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=b3ba4146"></script>
+</div><script src="../../_static/documentation_options.js?v=5929fcd5"></script>
     <script src="../../_static/doctools.js?v=888ff710"></script>
-    <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/scripts/furo.js?v=32e29ea5"></script>
     <script src="../../_static/design-tabs.js?v=36754332"></script>
     </body>

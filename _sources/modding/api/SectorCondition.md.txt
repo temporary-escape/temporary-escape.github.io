@@ -1,0 +1,42 @@
+# Class SectorCondition
+
+**Module:** `require("engine")`
+
+A class that represents a weighted entity
+
+------------
+## Constructors
+
+List of constructors that will create an instance of `SectorCondition`.
+
+### new()
+
+Default constructor that initializes the weighted entity with no entity and the default weight.
+
+### new(name, value)
+
+Parametrized constructor that initializes the weighted entity
+
+**Parameters:**
+
+* name: `string` - The name of the condition
+* value: `any` - The value of such condition
+
+------------
+## Fields
+
+List of fields within the table `SectorCondition`.
+These variables belong to this class and can be accessed only via an instance of this class.
+
+### name
+
+The name of the condition
+
+**Type:** `string`
+
+### value
+
+The value of such condition
+
+**Type:** `any`
+

@@ -1,13 +1,13 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="en" data-content_root="../../">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Setup - MacOS" href="macos.html" /><link rel="prev" title="Setup - Linux" href="linux.html" />
 
-    <!-- Generated with Sphinx 7.1.1 and Furo 2023.07.26 -->
+    <!-- Generated with Sphinx 7.2.3 and Furo 2023.08.19 -->
         <title>Setup - Windows - Temporary Escape documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b76e3c8a" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=135e06be" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?v=36a5483c" />
@@ -247,6 +247,11 @@
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../modding/index.html">Modding</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Modding</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../modding/api/index.html">Lua API</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of Lua API</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../modding/api/Vector2.html">Class Vector2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../modding/api/Server.html">Class Server</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../modding/api/Spawner.html">Class Spawner</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../modding/api/SectorType.html">Class SectorType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../modding/api/SectorCondition.html">Class SectorCondition</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../modding/api/Iterator_T_.html">Class Iterator&lt;T&gt;</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../modding/api/Repository_T_.html">Class Repository&lt;T&gt;</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../modding/api/GalaxyData.html">Class GalaxyData</a></li>
@@ -258,8 +263,6 @@
 <li class="toctree-l3"><a class="reference internal" href="../../modding/api/PlayerLocationData.html">Class PlayerLocationData</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../modding/api/StartingLocationData.html">Class StartingLocationData</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../modding/api/Database.html">Class Database</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../modding/api/Server.html">Class Server</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../modding/api/Vector2.html">Class Vector2</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../modding/tutorial/index.html">Tutorial</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of Tutorial</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="simple">
@@ -322,9 +325,9 @@
         </div>
         <article role="main">
           <section id="setup-windows">
-<h1>Setup - Windows<a class="headerlink" href="#setup-windows" title="Permalink to this heading">#</a></h1>
+<h1>Setup - Windows<a class="headerlink" href="#setup-windows" title="Link to this heading">#</a></h1>
 <section id="requirements">
-<h2>1. Requirements<a class="headerlink" href="#requirements" title="Permalink to this heading">#</a></h2>
+<h2>1. Requirements<a class="headerlink" href="#requirements" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>You must have Windows 10 64-bit or later, or Windows Server 2019 or later.</p></li>
 <li><p>The game is compiled for x64 architecture only.</p></li>
@@ -334,7 +337,7 @@
 </ul>
 </section>
 <section id="install-dependencies">
-<h2>2. Install dependencies<a class="headerlink" href="#install-dependencies" title="Permalink to this heading">#</a></h2>
+<h2>2. Install dependencies<a class="headerlink" href="#install-dependencies" title="Link to this heading">#</a></h2>
 <p>First you need the <strong>Visual Studio Build Tools</strong>. This already comes with the Visual Studio IDE, but
 you don’t need to install the entire IDE, the Build Tools alone is enough.
 Go to <a class="reference external" href="https://visualstudio.microsoft.com/downloads/?q=build+tools">Visual Studio Download page</a> and at the bottom
@@ -355,7 +358,7 @@ That’s all you need, click the Install button.</p>
 </div>
 </section>
 <section id="option-a-command-line-only">
-<h2>3. Option A: Command line only<a class="headerlink" href="#option-a-command-line-only" title="Permalink to this heading">#</a></h2>
+<h2>3. Option A: Command line only<a class="headerlink" href="#option-a-command-line-only" title="Link to this heading">#</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>To get the best experience developing this game, <strong>it is recommended to use an IDE</strong>.
@@ -427,7 +430,7 @@ the game will compile shader code and will compress the textures from png format
 </div>
 </section>
 <section id="option-b-visual-studio-code">
-<h2>3. Option B: Visual Studio Code<a class="headerlink" href="#option-b-visual-studio-code" title="Permalink to this heading">#</a></h2>
+<h2>3. Option B: Visual Studio Code<a class="headerlink" href="#option-b-visual-studio-code" title="Link to this heading">#</a></h2>
 <p>Install <a class="reference external" href="https://code.visualstudio.com/">Visual Studio Code</a> and make sure you have the latest updated version.</p>
 <p>Once installed, make sure to install the CMake Tools extension by looking for “cmake” and installing the
 “CMake Tools” by Microsoft.</p>
@@ -481,7 +484,7 @@ option.</p>
 <p><img alt="" src="../../_images/windows-vscode-target.png" /></p>
 <p>Once built, you should see something like this:</p>
 <p><img alt="" src="../../_images/windows-vscode-builddone.png" /></p>
-<p>To launch the game with debugger through Visual Studio, you must create a new launch configuration <code class="docutils literal notranslate"><span class="pre">launch.json</span></code>
+<p>To launch the game with debugger through Visual Studio Code, you must create a new launch configuration <code class="docutils literal notranslate"><span class="pre">launch.json</span></code>
 in the <code class="docutils literal notranslate"><span class="pre">.vscode</span></code> folder. If the folder does not exist, create it. Use the following contents below for the
 <code class="docutils literal notranslate"><span class="pre">launch.json</span></code> file:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
@@ -523,7 +526,7 @@ the game will compile shader code and will compress the textures from png format
 </div>
 </section>
 <section id="option-c-visual-studio-ide-2022">
-<h2>3. Option C: Visual Studio IDE 2022<a class="headerlink" href="#option-c-visual-studio-ide-2022" title="Permalink to this heading">#</a></h2>
+<h2>3. Option C: Visual Studio IDE 2022<a class="headerlink" href="#option-c-visual-studio-ide-2022" title="Link to this heading">#</a></h2>
 <p>You will need to install Visual Studio 2022 or later. To do so, open the start menu, and search
 for <code class="docutils literal notranslate"><span class="pre">visual</span> <span class="pre">studio</span> <span class="pre">installer</span></code>.
 This has been installed with the Build Tools that you have installed previously (see the “Dependencies” section above).</p>
@@ -590,7 +593,7 @@ the game will compile shader code and will compress the textures from png format
 </div>
 </section>
 <section id="option-d-jetbrains-clion">
-<h2>3. Option D: jetBrains CLion<a class="headerlink" href="#option-d-jetbrains-clion" title="Permalink to this heading">#</a></h2>
+<h2>3. Option D: jetBrains CLion<a class="headerlink" href="#option-d-jetbrains-clion" title="Link to this heading">#</a></h2>
 <p>First, download and install <a class="reference external" href="https://www.jetbrains.com/clion/download/">CLion from the official JetBrains website</a>.</p>
 <p>Next, you will need to clone the source code and fetch the git submodules.</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/temporary-escape/temporary-escape.git
@@ -663,7 +666,7 @@ the game will compile shader code and will compress the textures from png format
 </div>
 </section>
 <section id="installing-the-game-optional">
-<h2>4. Installing the game (optional)<a class="headerlink" href="#installing-the-game-optional" title="Permalink to this heading">#</a></h2>
+<h2>4. Installing the game (optional)<a class="headerlink" href="#installing-the-game-optional" title="Link to this heading">#</a></h2>
 <p>To install the game, open a command line, go to the project folder, and type the following command below.
 Make sure that you have used <code class="docutils literal notranslate"><span class="pre">-DCMAKE_INSTALL_PREFIX=/some/path</span></code> during the configuration. If you are using
 a CMake preset (via <code class="docutils literal notranslate"><span class="pre">--preset</span></code>) then the install folder is going to be a directory named <code class="docutils literal notranslate"><span class="pre">install</span></code> inside the
@@ -675,7 +678,7 @@ cmake<span class="w"> </span>--build<span class="w"> </span>./build<span class="
 </div>
 </section>
 <section id="creating-an-exe-installer-or-a-zip-package-optional">
-<h2>5. Creating an exe installer or a zip package (optional)<a class="headerlink" href="#creating-an-exe-installer-or-a-zip-package-optional" title="Permalink to this heading">#</a></h2>
+<h2>5. Creating an exe installer or a zip package (optional)<a class="headerlink" href="#creating-an-exe-installer-or-a-zip-package-optional" title="Link to this heading">#</a></h2>
 <p>To create an installer<code class="docutils literal notranslate"><span class="pre">.exe</span></code> and <code class="docutils literal notranslate"><span class="pre">.zip</span></code> package, open a command line, go to the project folder, and type the following
 command below.</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># If you are using CLion the folder is most likely &quot;cmake-build-debug-visual-studio&quot; </span>
@@ -685,7 +688,7 @@ cmake<span class="w"> </span>--build<span class="w"> </span>./build<span class="
 </div>
 </section>
 <section id="vulkan-validation-layers-optional">
-<h2>6. Vulkan validation layers (optional)<a class="headerlink" href="#vulkan-validation-layers-optional" title="Permalink to this heading">#</a></h2>
+<h2>6. Vulkan validation layers (optional)<a class="headerlink" href="#vulkan-validation-layers-optional" title="Link to this heading">#</a></h2>
 <p>The validation layers are useful for debugging Vulkan issues. This is enabled at runtime and does not need re-compiling.
 To use the validation layers you must first download and install Vulkan SDK into your system.</p>
 <p>Download Vulkan SDK version <code class="docutils literal notranslate"><span class="pre">1.3.239.0</span></code> from
@@ -707,7 +710,7 @@ an <a class="reference external" href="https://temporary-escape.us-east-1.linode
 <p>The game will pick up the <code class="docutils literal notranslate"><span class="pre">VK_LAYER_PATH</span></code> and will enable the validation layers when the game starts.
 The game will stop and exit immediately if the validation layers can not be setup. This may
 happen if your Vulkan SDK folder is wrong or the environment variables are wrong. Look into
-the log file in your <code class="docutils literal notranslate"><span class="pre">~/.temporary-escape/</span></code> folder.</p>
+the log file in your <code class="docutils literal notranslate"><span class="pre">C:\Users\Username\AppData\Roaming\TemporaryEscape</span></code> folder.</p>
 </div>
 <p>If you are using JetBrains CLion, you can modify the “Run Configuration” for the “TemporaryEscapeMain” target
 (the dropdown in the top menu bar). Add these environment variables as shown below.</p>
@@ -816,9 +819,9 @@ add those variables into <code class="docutils literal notranslate"><span class=
       
     </aside>
   </div>
-</div><script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=b3ba4146"></script>
+</div><script src="../../_static/documentation_options.js?v=5929fcd5"></script>
     <script src="../../_static/doctools.js?v=888ff710"></script>
-    <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/scripts/furo.js?v=32e29ea5"></script>
     <script src="../../_static/design-tabs.js?v=36754332"></script>
     </body>

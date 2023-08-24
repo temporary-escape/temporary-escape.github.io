@@ -1,13 +1,13 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="en" data-content_root="../../">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Setup - Linux" href="linux.html" /><link rel="prev" title="Development" href="../index.html" />
 
-    <!-- Generated with Sphinx 7.1.1 and Furo 2023.07.26 -->
+    <!-- Generated with Sphinx 7.2.3 and Furo 2023.08.19 -->
         <title>Setup - Temporary Escape documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b76e3c8a" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=135e06be" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?v=36a5483c" />
@@ -247,6 +247,11 @@
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../modding/index.html">Modding</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Modding</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../modding/api/index.html">Lua API</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of Lua API</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../modding/api/Vector2.html">Class Vector2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../modding/api/Server.html">Class Server</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../modding/api/Spawner.html">Class Spawner</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../modding/api/SectorType.html">Class SectorType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../modding/api/SectorCondition.html">Class SectorCondition</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../modding/api/Iterator_T_.html">Class Iterator&lt;T&gt;</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../modding/api/Repository_T_.html">Class Repository&lt;T&gt;</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../modding/api/GalaxyData.html">Class GalaxyData</a></li>
@@ -258,8 +263,6 @@
 <li class="toctree-l3"><a class="reference internal" href="../../modding/api/PlayerLocationData.html">Class PlayerLocationData</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../modding/api/StartingLocationData.html">Class StartingLocationData</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../modding/api/Database.html">Class Database</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../modding/api/Server.html">Class Server</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../modding/api/Vector2.html">Class Vector2</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../modding/tutorial/index.html">Tutorial</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of Tutorial</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="simple">
@@ -322,7 +325,7 @@
         </div>
         <article role="main">
           <section id="setup">
-<h1>Setup<a class="headerlink" href="#setup" title="Permalink to this heading">#</a></h1>
+<h1>Setup<a class="headerlink" href="#setup" title="Link to this heading">#</a></h1>
 <p>To work with the C++ code of the game you must first set up the environment for your system.
 You can do so by following the guides listed below.
 The game can run on all three platforms and you can develop the game on all of those platforms.</p>
@@ -334,12 +337,16 @@ The game can run on all three platforms and you can develop the game on all of t
 <p><strong>You do not need to do this setup if you are interested only in modding the game with Lua or editing the
 asset files.</strong> See the <a class="reference internal" href="../../modding/tutorial/index.html"><span class="doc std std-doc">Modding Tutorial</span></a> for more information.</p>
 <section id="tl-dr">
-<h2>TL;DR<a class="headerlink" href="#tl-dr" title="Permalink to this heading">#</a></h2>
-<p>In short:</p>
+<h2>TL;DR<a class="headerlink" href="#tl-dr" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Make sure that you have Clang version 14 or later, CMake, Ninja Build tool, pkg-config, and <code class="docutils literal notranslate"><span class="pre">xorg-dev</span></code> on Linux.</p></li>
-<li><p>On Windows use <strong>only</strong> Clang-CL provided by the Visual Studio Build Tools. Anything else will fail.</p></li>
+<li><p>On Windows use <strong>ONLY</strong> x64 Clang-CL provided by the Visual Studio Build Tools. Anything else will fail. Default
+MSVC (i.e. <code class="docutils literal notranslate"><span class="pre">cl.exe</span></code>) will fail.</p></li>
+<li><p>Apple Mac Intel is supported and M1/M2 are also supported with Apple Rosetta.</p></li>
+<li><p>No special Linux distribution is needed.</p></li>
 <li><p>Prefer to use the provided CMake preset named <code class="docutils literal notranslate"><span class="pre">ninja-macos</span></code>, <code class="docutils literal notranslate"><span class="pre">ninja-linux</span></code>, or <code class="docutils literal notranslate"><span class="pre">ninja-msvc</span></code>.</p></li>
+<li><p>You need a GPU that supports Vulkan 1.1 or higher (anything from year 2019 or later should be ok). On Apple Mac you
+need Metal, which is supported out of the box.</p></li>
 <li><p>You don’t need to install Vulkan SDK.</p></li>
 <li><p>You don’t need to install vcpkg into your system.</p></li>
 <li><p>You don’t need any additional C++ dependencies. Everything is handled by the CMake, and by the vcpkg that is a git
@@ -425,9 +432,9 @@ submodule within the source code.</p></li>
       
     </aside>
   </div>
-</div><script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=b3ba4146"></script>
+</div><script src="../../_static/documentation_options.js?v=5929fcd5"></script>
     <script src="../../_static/doctools.js?v=888ff710"></script>
-    <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/scripts/furo.js?v=32e29ea5"></script>
     <script src="../../_static/design-tabs.js?v=36754332"></script>
     </body>

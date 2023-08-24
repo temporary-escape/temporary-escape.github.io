@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Class Vector2" href="Vector2.html" /><link rel="prev" title="Modding" href="../index.html" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Class Iterator&lt;T&gt;" href="Iterator_T_.html" /><link rel="prev" title="Class SectorType" href="SectorType.html" />
 
     <!-- Generated with Sphinx 7.2.3 and Furo 2023.08.19 -->
-        <title>Lua API - Temporary Escape documentation</title>
+        <title>Class SectorCondition - Temporary Escape documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=135e06be" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
@@ -246,12 +246,12 @@
 </ul>
 </li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">Modding</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Modding</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2 current has-children current-page"><a class="current reference internal" href="#">Lua API</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of Lua API</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 current has-children"><a class="reference internal" href="index.html">Lua API</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of Lua API</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="Vector2.html">Class Vector2</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Server.html">Class Server</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Spawner.html">Class Spawner</a></li>
 <li class="toctree-l3"><a class="reference internal" href="SectorType.html">Class SectorType</a></li>
-<li class="toctree-l3"><a class="reference internal" href="SectorCondition.html">Class SectorCondition</a></li>
+<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">Class SectorCondition</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Iterator_T_.html">Class Iterator&lt;T&gt;</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Repository_T_.html">Class Repository&lt;T&gt;</a></li>
 <li class="toctree-l3"><a class="reference internal" href="GalaxyData.html">Class GalaxyData</a></li>
@@ -302,7 +302,7 @@
         </a>
         <div class="content-icon-container">
           <div class="edit-this-page">
-  <a class="muted-link" href="https://github.com/temporary-escape/temporary-escape/tree/master/docs/source/modding/api/index.md" title="Edit this page">
+  <a class="muted-link" href="https://github.com/temporary-escape/temporary-escape/tree/master/docs/source/modding/api/SectorCondition.md" title="Edit this page">
     <svg aria-hidden="true" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
       <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
       <path d="M4 20h4l10.5 -10.5a1.5 1.5 0 0 0 -4 -4l-10.5 10.5v4" />
@@ -324,71 +324,43 @@
           </label>
         </div>
         <article role="main">
-          <section id="lua-api">
-<h1>Lua API<a class="headerlink" href="#lua-api" title="Link to this heading">#</a></h1>
-<section id="classes">
-<h2>Classes<a class="headerlink" href="#classes" title="Link to this heading">#</a></h2>
-<div class="table-wrapper colwidths-auto docutils container">
-<table class="docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head"><p>Class</p></th>
-<th class="head"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><a class="reference internal" href="Vector2.html"><span class="doc std std-doc">Vector2</span></a></p></td>
-<td><p>A simple 2D vector class of float type</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="Server.html"><span class="doc std std-doc">Server</span></a></p></td>
-<td><p>A class that represents server operations</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="Spawner.html"><span class="doc std std-doc">Spawner</span></a></p></td>
-<td><p>A class that represents a weighted entity</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="SectorType.html"><span class="doc std std-doc">SectorType</span></a></p></td>
-<td><p>A class that represents a some specific sector type with conditions</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="SectorCondition.html"><span class="doc std std-doc">SectorCondition</span></a></p></td>
-<td><p>A class that represents a weighted entity</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="Iterator_T_.html"><span class="doc std std-doc">Iterator<T></span></a></p></td>
-<td><p>An iterator that is used by the seek() function from the Repository class. This iterator can be used to iterate through set of values, one at a time, by some prefix.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="Repository_T_.html"><span class="doc std std-doc">Repository<T></span></a></p></td>
-<td><p>Repository of some specific database type</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="GalaxyData.html"><span class="doc std std-doc">GalaxyData</span></a></p></td>
-<td><p>Database type that represents basic galaxy information such us its name</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="RegionData.html"><span class="doc std std-doc">RegionData</span></a></p></td>
-<td><p>Database type that represents region data within a galaxy</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="FactionData.html"><span class="doc std std-doc">FactionData</span></a></p></td>
-<td><p>Database type that represents some faction</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="SystemData.html"><span class="doc std std-doc">SystemData</span></a></p></td>
-<td><p>Database type that represents some system within a galaxy that also belongs to a region</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="SectorData.html"><span class="doc std std-doc">SectorData</span></a></p></td>
-<td><p>Database type that represents some sector within a system</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="PlanetData.html"><span class="doc std std-doc">PlanetData</span></a></p></td>
-<td><p>Database type that represents some planet within a system</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="PlayerLocationData.html"><span class="doc std std-doc">PlayerLocationData</span></a></p></td>
-<td><p>Database type that specifies the location of the player within the universe</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="StartingLocationData.html"><span class="doc std std-doc">StartingLocationData</span></a></p></td>
-<td><p>Database type that specifies the starting location for new players.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="Database.html"><span class="doc std std-doc">Database</span></a></p></td>
-<td><p>Database class that can be used to access all of the data structures.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="toctree-wrapper compound">
-</div>
+          <section id="class-sectorcondition">
+<h1>Class SectorCondition<a class="headerlink" href="#class-sectorcondition" title="Link to this heading">#</a></h1>
+<p><strong>Module:</strong> <code class="docutils literal notranslate"><span class="pre">require(&quot;engine&quot;)</span></code></p>
+<p>A class that represents a weighted entity</p>
+<hr class="docutils" />
+<section id="constructors">
+<h2>Constructors<a class="headerlink" href="#constructors" title="Link to this heading">#</a></h2>
+<p>List of constructors that will create an instance of <code class="docutils literal notranslate"><span class="pre">SectorCondition</span></code>.</p>
+<section id="new">
+<h3>new()<a class="headerlink" href="#new" title="Link to this heading">#</a></h3>
+<p>Default constructor that initializes the weighted entity with no entity and the default weight.</p>
+</section>
+<section id="new-name-value">
+<h3>new(name, value)<a class="headerlink" href="#new-name-value" title="Link to this heading">#</a></h3>
+<p>Parametrized constructor that initializes the weighted entity</p>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p>name: <code class="docutils literal notranslate"><span class="pre">string</span></code> - The name of the condition</p></li>
+<li><p>value: <code class="docutils literal notranslate"><span class="pre">any</span></code> - The value of such condition</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="fields">
+<h2>Fields<a class="headerlink" href="#fields" title="Link to this heading">#</a></h2>
+<p>List of fields within the table <code class="docutils literal notranslate"><span class="pre">SectorCondition</span></code>.
+These variables belong to this class and can be accessed only via an instance of this class.</p>
+<section id="name">
+<h3>name<a class="headerlink" href="#name" title="Link to this heading">#</a></h3>
+<p>The name of the condition</p>
+<p><strong>Type:</strong> <code class="docutils literal notranslate"><span class="pre">string</span></code></p>
+</section>
+<section id="value">
+<h3>value<a class="headerlink" href="#value" title="Link to this heading">#</a></h3>
+<p>The value of such condition</p>
+<p><strong>Type:</strong> <code class="docutils literal notranslate"><span class="pre">any</span></code></p>
+</section>
 </section>
 </section>
 
@@ -397,23 +369,23 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="Vector2.html">
+          <a class="next-page" href="Iterator_T_.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Class Vector2</div>
+                <div class="title">Class Iterator&lt;T&gt;</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="../index.html">
+          <a class="prev-page" href="SectorType.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Modding</div>
+                <div class="title">Class SectorType</div>
                 
               </div>
             </a>
@@ -454,8 +426,17 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Lua API</a><ul>
-<li><a class="reference internal" href="#classes">Classes</a></li>
+<li><a class="reference internal" href="#">Class SectorCondition</a><ul>
+<li><a class="reference internal" href="#constructors">Constructors</a><ul>
+<li><a class="reference internal" href="#new">new()</a></li>
+<li><a class="reference internal" href="#new-name-value">new(name, value)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#fields">Fields</a><ul>
+<li><a class="reference internal" href="#name">name</a></li>
+<li><a class="reference internal" href="#value">value</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

@@ -1,13 +1,13 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="en" data-content_root="../../">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Class Repository&lt;T&gt;" href="Repository_T_.html" /><link rel="prev" title="Lua API" href="index.html" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Class Repository&lt;T&gt;" href="Repository_T_.html" /><link rel="prev" title="Class SectorCondition" href="SectorCondition.html" />
 
-    <!-- Generated with Sphinx 7.1.1 and Furo 2023.07.26 -->
+    <!-- Generated with Sphinx 7.2.3 and Furo 2023.08.19 -->
         <title>Class Iterator&lt;T&gt; - Temporary Escape documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b76e3c8a" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=135e06be" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?v=36a5483c" />
@@ -247,6 +247,11 @@
 </li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">Modding</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Modding</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l2 current has-children"><a class="reference internal" href="index.html">Lua API</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of Lua API</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="Vector2.html">Class Vector2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Server.html">Class Server</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Spawner.html">Class Spawner</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SectorType.html">Class SectorType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SectorCondition.html">Class SectorCondition</a></li>
 <li class="toctree-l3 current current-page"><a class="current reference internal" href="#">Class Iterator&lt;T&gt;</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Repository_T_.html">Class Repository&lt;T&gt;</a></li>
 <li class="toctree-l3"><a class="reference internal" href="GalaxyData.html">Class GalaxyData</a></li>
@@ -258,8 +263,6 @@
 <li class="toctree-l3"><a class="reference internal" href="PlayerLocationData.html">Class PlayerLocationData</a></li>
 <li class="toctree-l3"><a class="reference internal" href="StartingLocationData.html">Class StartingLocationData</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Database.html">Class Database</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Server.html">Class Server</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Vector2.html">Class Vector2</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../tutorial/index.html">Tutorial</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of Tutorial</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="simple">
@@ -322,17 +325,17 @@
         </div>
         <article role="main">
           <section id="class-iterator-t">
-<h1>Class Iterator&lt;T&gt;<a class="headerlink" href="#class-iterator-t" title="Permalink to this heading">#</a></h1>
+<h1>Class Iterator&lt;T&gt;<a class="headerlink" href="#class-iterator-t" title="Link to this heading">#</a></h1>
 <p><strong>Module:</strong> <code class="docutils literal notranslate"><span class="pre">require(&quot;engine&quot;)</span></code></p>
 <p>An iterator that is used by the seek() function from the Repository class. This iterator can be used to iterate through set of values, one at a time, by some prefix.</p>
 <p><strong>See also:</strong> <a class="reference internal" href="Repository_T_.html"><span class="doc std std-doc">Repository&lt;T&gt;</span></a></p>
 <hr class="docutils" />
 <section id="member-functions">
-<h2>Member Functions<a class="headerlink" href="#member-functions" title="Permalink to this heading">#</a></h2>
+<h2>Member Functions<a class="headerlink" href="#member-functions" title="Link to this heading">#</a></h2>
 <p>List of <strong>member</strong> functions within the table <code class="docutils literal notranslate"><span class="pre">Iterator&lt;T&gt;</span></code>.
 These functions need to be called using the colon symbol on some instance of <code class="docutils literal notranslate"><span class="pre">Iterator&lt;T&gt;</span></code>.</p>
 <section id="next">
-<h3>next()<a class="headerlink" href="#next" title="Permalink to this heading">#</a></h3>
+<h3>next()<a class="headerlink" href="#next" title="Link to this heading">#</a></h3>
 <p>Retrieves the next value</p>
 <p><strong>Returns:</strong> <code class="docutils literal notranslate"><span class="pre">bool</span></code> - True if there is some value to read or false if this is end of the seek</p>
 <div class="admonition warning">
@@ -343,17 +346,17 @@ These functions need to be called using the colon symbol on some instance of <co
 </section>
 <hr class="docutils" />
 <section id="fields">
-<h2>Fields<a class="headerlink" href="#fields" title="Permalink to this heading">#</a></h2>
+<h2>Fields<a class="headerlink" href="#fields" title="Link to this heading">#</a></h2>
 <p>List of fields within the table <code class="docutils literal notranslate"><span class="pre">Iterator&lt;T&gt;</span></code>.
 These variables belong to this class and can be accessed only via an instance of this class.</p>
 <section id="value">
-<h3>value<a class="headerlink" href="#value" title="Permalink to this heading">#</a></h3>
+<h3>value<a class="headerlink" href="#value" title="Link to this heading">#</a></h3>
 <p>The current value that the iterator points to. You must first call next() before using this field, otherwise this raises an error.</p>
 <p><strong>Read-only!</strong></p>
 <p><strong>Type:</strong> <code class="docutils literal notranslate"><span class="pre">T</span></code></p>
 </section>
 <section id="id1">
-<h3>value<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<h3>value<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <p>The current key that the iterator points to. You must first call next() before using this field, otherwise this raises an error.</p>
 <p><strong>Read-only!</strong></p>
 <p><strong>Type:</strong> <code class="docutils literal notranslate"><span class="pre">string</span></code></p>
@@ -375,14 +378,14 @@ These variables belong to this class and can be accessed only via an instance of
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="index.html">
+          <a class="prev-page" href="SectorCondition.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Lua API</div>
+                <div class="title">Class SectorCondition</div>
                 
               </div>
             </a>
@@ -444,9 +447,9 @@ These variables belong to this class and can be accessed only via an instance of
       
     </aside>
   </div>
-</div><script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=b3ba4146"></script>
+</div><script src="../../_static/documentation_options.js?v=5929fcd5"></script>
     <script src="../../_static/doctools.js?v=888ff710"></script>
-    <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/scripts/furo.js?v=32e29ea5"></script>
     <script src="../../_static/design-tabs.js?v=36754332"></script>
     </body>
