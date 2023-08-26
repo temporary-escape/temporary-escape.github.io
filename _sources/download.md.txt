@@ -15,7 +15,7 @@ All releases are built automatically on GitHub from [here](https://github.com/te
 ````{grid} 1 1 2 3
 ```{grid-item-card} Windows 64-bit
 :img-top: images/windows.png
-:link: https://temporary-escape.us-east-1.linodeobjects.com/release/v0.4.1/TemporaryEscape-v0.4.0-14-g900d07f-Windows.msi
+:link: https://temporary-escape.us-east-1.linodeobjects.com/release/v0.4.1/TemporaryEscape-v0.4.1-Windows.msi
 :text-align: center
 
 MSI Installer (15.52 MB)
@@ -23,7 +23,7 @@ MSI Installer (15.52 MB)
 
 ```{grid-item-card} Linux 64-bit
 :img-top: images/linux.png
-:link: https://temporary-escape.us-east-1.linodeobjects.com/release/v0.4.1/TemporaryEscape-v0.4.0-14-g900d07f-Linux.AppImage
+:link: https://temporary-escape.us-east-1.linodeobjects.com/release/v0.4.1/TemporaryEscape-v0.4.1-Linux.AppImage
 :text-align: center
 
 AppImage (20.01 MB)
@@ -31,7 +31,7 @@ AppImage (20.01 MB)
 
 ```{grid-item-card} Mac OS (Intel or ARM)
 :img-top: images/apple.png
-:link: https://temporary-escape.us-east-1.linodeobjects.com/release/v0.4.1/TemporaryEscape-v0.4.0-14-g900d07f-Darwin.dmg
+:link: https://temporary-escape.us-east-1.linodeobjects.com/release/v0.4.1/TemporaryEscape-v0.4.1-Darwin.dmg
 :text-align: center
 
 Apple Disk Image (20.48 MB)
@@ -45,7 +45,7 @@ Apple Disk Image (20.48 MB)
 ````{grid} 1 1 2 3
 ```{grid-item-card} Windows 64-bit
 :img-top: images/windows.png
-:link: https://temporary-escape.us-east-1.linodeobjects.com/release/v0.4.1/TemporaryEscape-v0.4.0-14-g900d07f-Windows.zip
+:link: https://temporary-escape.us-east-1.linodeobjects.com/release/v0.4.1/TemporaryEscape-v0.4.1-Windows.zip
 :text-align: center
 
 Portable ZIP (15.34 MB)
@@ -53,7 +53,7 @@ Portable ZIP (15.34 MB)
 
 ```{grid-item-card} Linux 64-bit
 :img-top: images/linux.png
-:link: https://temporary-escape.us-east-1.linodeobjects.com/release/v0.4.1/TemporaryEscape-v0.4.0-14-g900d07f-Linux.tar.gz
+:link: https://temporary-escape.us-east-1.linodeobjects.com/release/v0.4.1/TemporaryEscape-v0.4.1-Linux.tar.gz
 :text-align: center
 
 Portable TAR.GZ (19.66 MB)
@@ -61,7 +61,7 @@ Portable TAR.GZ (19.66 MB)
 
 ```{grid-item-card} Mac OS (Intel or ARM)
 :img-top: images/apple.png
-:link: https://temporary-escape.us-east-1.linodeobjects.com/release/v0.4.1/TemporaryEscape-v0.4.0-14-g900d07f-Darwin.zip
+:link: https://temporary-escape.us-east-1.linodeobjects.com/release/v0.4.1/TemporaryEscape-v0.4.1-Darwin.zip
 :text-align: center
 
 Portable ZIP (20.57 MB)
