@@ -46,6 +46,12 @@ These variables belong to this class and can be accessed only via an instance of
 
 **Type:** `Repository<PlanetData>`
 
+### players
+
+**Read-only!**
+
+**Type:** `Repository<PlayerData>`
+
 ### player_locations
 
 **Read-only!**

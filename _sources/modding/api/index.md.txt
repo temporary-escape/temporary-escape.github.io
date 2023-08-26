@@ -17,6 +17,7 @@
 | [SystemData](SystemData) | Database type that represents some system within a galaxy that also belongs to a region |
 | [SectorData](SectorData) | Database type that represents some sector within a system |
 | [PlanetData](PlanetData) | Database type that represents some planet within a system |
+| [PlayerData](PlayerData) | Database type that specifies the information of the player |
 | [PlayerLocationData](PlayerLocationData) | Database type that specifies the location of the player within the universe |
 | [StartingLocationData](StartingLocationData) | Database type that specifies the starting location for new players. |
 | [Database](Database) | Database class that can be used to access all of the data structures. |
@@ -36,6 +37,7 @@ FactionData
 SystemData
 SectorData
 PlanetData
+PlayerData
 PlayerLocationData
 StartingLocationData
 Database

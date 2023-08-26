@@ -1,0 +1,15 @@
+# Class PlayerData
+
+**Module:** `require("engine")`
+
+Database type that specifies the information of the player
+
+------------
+## Constructors
+
+List of constructors that will create an instance of `PlayerData`.
+
+### new()
+
+Default constructor
+
