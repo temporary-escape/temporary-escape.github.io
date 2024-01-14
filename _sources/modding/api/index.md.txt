@@ -4,6 +4,11 @@
 
 | Class | Description |
 | ----- | ----------- |
+| [Server](Server) | A class that represents server operations |
+| [Spawner](Spawner) | A class that represents a weighted entity |
+| [SectorType](SectorType) | A class that represents a some specific sector type with conditions |
+| [SectorCondition](SectorCondition) | A class that represents a weighted entity |
+| [Vector2](Vector2) | A simple 2D vector class of float type |
 | [Iterator<T>](Iterator_T_) | An iterator that is used by the seek() function from the Repository class. This iterator can be used to iterate through set of values, one at a time, by some prefix. |
 | [Repository<T>](Repository_T_) | Repository of some specific database type |
 | [GalaxyData](GalaxyData) | Database type that represents basic galaxy information such us its name |
@@ -16,14 +21,14 @@
 | [PlayerLocationData](PlayerLocationData) | Database type that specifies the location of the player within the universe |
 | [StartingLocationData](StartingLocationData) | Database type that specifies the starting location for new players. |
 | [Database](Database) | Database class that can be used to access all of the data structures. |
-| [Spawner](Spawner) | A class that represents a weighted entity |
-| [SectorType](SectorType) | A class that represents a some specific sector type with conditions |
-| [SectorCondition](SectorCondition) | A class that represents a weighted entity |
-| [Server](Server) | A class that represents server operations |
-| [Vector2](Vector2) | A simple 2D vector class of float type |
 
 ```{toctree}
 :hidden:
+Server
+Spawner
+SectorType
+SectorCondition
+Vector2
 Iterator_T_
 Repository_T_
 GalaxyData
@@ -36,9 +41,4 @@ PlayerData
 PlayerLocationData
 StartingLocationData
 Database
-Spawner
-SectorType
-SectorCondition
-Server
-Vector2
 ```
