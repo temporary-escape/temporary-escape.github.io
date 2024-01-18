@@ -18,12 +18,3 @@ Moves a player to sector and starts the sector if it is not running
 
 * player_id: `The` - ID of the player to move
 
-### add_sector_type(name, type)
-
-Adds a new sector type, or overwrites an existing sector type, for the galaxy generator.
-
-**Parameters:**
-
-* name: `Name` - of the sector type
-* type: `An` - instance of SectorType
-
