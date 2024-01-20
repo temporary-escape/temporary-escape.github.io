@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Development" href="../../development/index.html" /><link rel="prev" title="Class Database" href="../api/Database.html" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="1. Introduction" href="introduction.html" /><link rel="prev" title="Class Database" href="../api/Database.html" />
 
     <!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 -->
         <title>Tutorial - Temporary Escape documentation</title>
@@ -212,7 +212,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -263,7 +263,13 @@
 <li class="toctree-l3"><a class="reference internal" href="../api/Database.html">Class Database</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current has-children current-page"><a class="current reference internal" href="#">Tutorial</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of Tutorial</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="simple">
+<li class="toctree-l2 current has-children current-page"><a class="current reference internal" href="#">Tutorial</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of Tutorial</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html">1. Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lua.html">2. Lua Contexts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lua_imports.html">3. Imports</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lua_modules.html">4. Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lua_classes.html">5. Classes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="engine_api.html">6. Game Engine API</a></li>
 </ul>
 </li>
 </ul>
@@ -316,7 +322,7 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
@@ -324,9 +330,58 @@
         <article role="main">
           <section id="tutorial">
 <h1>Tutorial<a class="headerlink" href="#tutorial" title="Link to this heading">#</a></h1>
-<p>To be added…</p>
-<div class="toctree-wrapper compound">
+<p>The following content is a tutorial on creating mods for the Temporary Escape game.</p>
+<p><strong>Modding allows you to change how the game behaves.</strong> For example:</p>
+<ul class="simple">
+<li><p>Adding in new entity types</p></li>
+<li><p>Overwriting or adding new textures, models, icons, turrets, ships, sounds, etc.</p></li>
+<li><p>Adding custom scripted behavior to entities</p></li>
+<li><p>Custom missions and campaigns</p></li>
+<li><p>Changing an existing behavior by overwriting event handlers</p></li>
+<li><p>And much more!</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>You do not need to set up a C++ development environment!</strong></p>
+<p>The modding works out of the box. All you need is a simple text editor (no, not Microsoft Office!).
+There are no packaging steps required. You work on the files directly!</p>
 </div>
+<section id="list-of-tutorials">
+<h2>List of tutorials<a class="headerlink" href="#list-of-tutorials" title="Link to this heading">#</a></h2>
+<p><strong>Please follow the tutorials in order. It is very important that you understand the principles behind
+the game engine.</strong></p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">1. Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#basic-mod-structure">Basic mod structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#mod-directory-contents">Mod directory contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#scripting">Scripting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="lua.html">2. Lua Contexts</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="lua.html#server-and-sector-context">Server and sector context</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lua.html#server-context">Server context</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lua.html#sector-context">Sector context</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="lua.html#entrypoints">Entrypoints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="lua_imports.html">3. Imports</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="lua_imports.html#local-mod-files">Local mod files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lua_imports.html#import-from-other-mod">Import from other mod</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="lua_modules.html">4. Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lua_classes.html">5. Classes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="lua_classes.html#an-example">An example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lua_classes.html#inheritance">Inheritance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="engine_api.html">6. Game Engine API</a></li>
+</ul>
+</div>
+</section>
 </section>
 
         </article>
@@ -334,12 +389,12 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../../development/index.html">
+          <a class="next-page" href="introduction.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Development</div>
+                <div class="title">1. Introduction</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -379,8 +434,27 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Tutorial</a><ul>
+<li><a class="reference internal" href="#list-of-tutorials">List of tutorials</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>
