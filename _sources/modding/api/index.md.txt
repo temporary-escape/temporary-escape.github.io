@@ -4,8 +4,8 @@
 
 | Class | Description |
 | ----- | ----------- |
-| [Server](Server) | A class that represents server operations |
 | [Vector2](Vector2) | A simple 2D vector class of float type |
+| [Server](Server) | A class that represents server operations |
 | [Iterator<T>](Iterator_T_) | An iterator that is used by the seek() function from the Repository class. This iterator can be used to iterate through set of values, one at a time, by some prefix. |
 | [Repository<T>](Repository_T_) | Repository of some specific database type |
 | [GalaxyData](GalaxyData) | Database type that represents basic galaxy information such us its name |
@@ -21,8 +21,8 @@
 
 ```{toctree}
 :hidden:
-Server
 Vector2
+Server
 Iterator_T_
 Repository_T_
 GalaxyData
